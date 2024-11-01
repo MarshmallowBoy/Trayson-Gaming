@@ -22,6 +22,8 @@ public class SC_FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    public GameObject Hat;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -36,6 +38,10 @@ public class SC_FPSController : MonoBehaviour
     {
         if (GetComponent<NetworkObject>().IsOwner)
         {
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                AddHat(Hat);
+            }
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
@@ -75,5 +81,18 @@ public class SC_FPSController : MonoBehaviour
                 transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
             }
         }
+    }
+
+    [Rpc(SendTo.Server)]
+    public void AddHat(GameObject Hat1)
+    {
+        AddHatRpc(Hat1);
+    }
+
+    [Rpc(SendTo.Everyone)]
+    public void AddHatRpc(GameObject Hat1)
+    {
+        Hat.SetActive(true);
+        Debug.Log("Received");
     }
 }
