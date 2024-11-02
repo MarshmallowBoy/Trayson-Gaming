@@ -9663,7 +9663,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 127.0.0.1
+    Address: 10.147.18.165
     Port: 7777
     ServerListenAddress: 0.0.0.0
   DebugSimulator:
@@ -18670,13 +18670,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128598049}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.007474354, y: 0.009864154, z: 0.2457884, w: 0.9692445}
-  m_LocalPosition: {x: -16.07648, y: 1.7500744, z: -27.916885}
+  m_LocalRotation: {x: 0.0034544882, y: 0.011884199, z: 0.5760138, w: 0.81734633}
+  m_LocalPosition: {x: -16.0995, y: 1.763, z: -27.916885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1724078615}
-  m_LocalEulerAnglesHint: {x: 0.552, y: 1.306, z: 28.465}
+  m_LocalEulerAnglesHint: {x: -0.461, y: 1.341, z: 70.342}
 --- !u!224 &264834125630654629
 RectTransform:
   m_ObjectHideFlags: 0
