@@ -9663,7 +9663,7 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 10.47.0.152
+    Address: 127.0.0.1
     Port: 7777
     ServerListenAddress: 0.0.0.0
   DebugSimulator:
@@ -11747,7 +11747,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1552586020}
   - component: {fileID: 1552586019}
-  - component: {fileID: 1552586018}
   - component: {fileID: 1552586021}
   m_Layer: 0
   m_Name: Main Camera
@@ -11756,14 +11755,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1552586018
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552586017}
-  m_Enabled: 1
 --- !u!20 &1552586019
 Camera:
   m_ObjectHideFlags: 0

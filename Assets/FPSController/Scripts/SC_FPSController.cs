@@ -36,11 +36,17 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
+        if (NetworkManager.Singleton.IsClient && Input.GetKeyDown(KeyCode.P))
+        {
+            // Client -> Server because PingRpc sends to Server
+            PingRpc(1);
+        }
+
         if (GetComponent<NetworkObject>().IsOwner)
         {
             if (Input.GetKeyDown(KeyCode.H))
             {
-                AddHat(Hat);
+                AddHat1Rpc();
             }
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -83,14 +89,30 @@ public class SC_FPSController : MonoBehaviour
         }
     }
 
+
     [Rpc(SendTo.Server)]
-    public void AddHat(GameObject Hat1)
+    public void PingRpc(int pingCount)
     {
-        AddHatRpc(Hat1);
+        // Server -> Clients because PongRpc sends to NotServer
+        // Note: This will send to all clients.
+        // Sending to the specific client that requested the pong will be discussed in the next section.
+        PongRpc(pingCount, "PONG!");
     }
 
-    [Rpc(SendTo.Everyone)]
-    public void AddHatRpc(GameObject Hat1)
+    [Rpc(SendTo.NotServer)]
+    void PongRpc(int pingCount, string message)
+    {
+        Debug.Log($"Received pong from server for ping {pingCount} and message {message}");
+    }
+
+    [Rpc(SendTo.Server)]
+    public void AddHat1Rpc()
+    {
+        AddHatRpc();
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    void AddHatRpc()
     {
         Hat.SetActive(true);
         Debug.Log("Received");
