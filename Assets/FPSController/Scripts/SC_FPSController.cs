@@ -5,7 +5,7 @@ using Unity.Netcode;
 using Unity.Networking;
 [RequireComponent(typeof(CharacterController))]
 
-public class SC_FPSController : MonoBehaviour
+public class SC_FPSController : NetworkBehaviour
 {
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
@@ -22,7 +22,8 @@ public class SC_FPSController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    public GameObject Hat;
+    public GameObject Eye;
+    public GameObject HatMenu;
 
     void Start()
     {
@@ -31,23 +32,34 @@ public class SC_FPSController : MonoBehaviour
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        playerCamera.gameObject.SetActive(GetComponent<NetworkObject>().IsOwner);
+        playerCamera.gameObject.SetActive(IsOwner);
+        Eye.SetActive(!IsOwner);
     }
 
     void Update()
     {
-        if (NetworkManager.Singleton.IsClient && Input.GetKeyDown(KeyCode.P))
-        {
-            // Client -> Server because PingRpc sends to Server
-            PingRpc(1);
-        }
-
-        if (GetComponent<NetworkObject>().IsOwner)
+        if (IsOwner)
         {
             if (Input.GetKeyDown(KeyCode.H))
             {
-                AddHat1Rpc();
+                HatMenu.SetActive(!HatMenu.activeInHierarchy);
+                //AddHatSendRpc();
             }
+
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                Cursor.visible = !Cursor.visible;
+                if (Cursor.visible)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                canMove = !Cursor.visible;
+            }
+
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
@@ -90,31 +102,4 @@ public class SC_FPSController : MonoBehaviour
     }
 
 
-    [Rpc(SendTo.Server)]
-    public void PingRpc(int pingCount)
-    {
-        // Server -> Clients because PongRpc sends to NotServer
-        // Note: This will send to all clients.
-        // Sending to the specific client that requested the pong will be discussed in the next section.
-        PongRpc(pingCount, "PONG!");
-    }
-
-    [Rpc(SendTo.NotServer)]
-    void PongRpc(int pingCount, string message)
-    {
-        Debug.Log($"Received pong from server for ping {pingCount} and message {message}");
-    }
-
-    [Rpc(SendTo.Server)]
-    public void AddHat1Rpc()
-    {
-        AddHatRpc();
-    }
-
-    [Rpc(SendTo.ClientsAndHost)]
-    void AddHatRpc()
-    {
-        Hat.SetActive(true);
-        Debug.Log("Received");
-    }
 }
