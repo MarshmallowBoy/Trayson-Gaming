@@ -27621,10 +27621,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7023974396876390944, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cb11ce008fad34bb3533f38d6a7d3a, type: 2}
+    - target: {fileID: -241587437493983680, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cb11ce008fad34bb3533f38d6a7d3a, type: 2}
     - target: {fileID: 919132149155446097, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
       propertyPath: m_Name
       value: Penguins 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2786534777698132407, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cb11ce008fad34bb3533f38d6a7d3a, type: 2}
+    - target: {fileID: 6317578925029434746, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ee78c4dc7459a247835abc9894cb959, type: 2}
+    - target: {fileID: 7339356831882890532, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9cb11ce008fad34bb3533f38d6a7d3a, type: 2}
+    - target: {fileID: 8100320773420232829, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ee78c4dc7459a247835abc9894cb959, type: 2}
+    - target: {fileID: 8442510506162454399, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bdcb19387b507041a7b88b7f872bf2b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8700725330082129686, guid: 31ef27f98ac9f69498af5eff1870ea86, type: 3}
