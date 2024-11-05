@@ -34,9 +34,12 @@ public class SC_FPSController : NetworkBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerCamera.gameObject.SetActive(IsOwner);
-        foreach(var m in PlayerModel)
+        if (IsOwner)
         {
-            m.enabled = !IsOwner;
+            foreach (var m in PlayerModel)
+            {
+                m.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+            }
         }
     }
 
