@@ -12316,7 +12316,7 @@ GameObject:
   - component: {fileID: 9210579366318506676}
   - component: {fileID: 6687268273301358202}
   - component: {fileID: 7447929773694690858}
-  - component: {fileID: 8660589748550354112}
+  - component: {fileID: 3966727792006142400}
   m_Layer: 0
   m_Name: FPSPlayer
   m_TagString: Untagged
@@ -12482,7 +12482,7 @@ MultiplayerRolesData:
     m_RolesMask: 3
   - m_Object: {fileID: 9210579366318506675}
     m_RolesMask: 3
---- !u!114 &8660589748550354112
+--- !u!114 &3966727792006142400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12491,7 +12491,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9210579366318506677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Script: {fileID: 11500000, guid: b0d53eb2e58be704a92e711c8ae838b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -12551,7 +12551,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210579366455209361}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
