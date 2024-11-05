@@ -22,7 +22,7 @@ public class SC_FPSController : NetworkBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    public GameObject Eye;
+    public Renderer[] PlayerModel;
     public GameObject HatMenu;
     public Animator animator;
 
@@ -34,7 +34,10 @@ public class SC_FPSController : NetworkBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerCamera.gameObject.SetActive(IsOwner);
-        Eye.SetActive(!IsOwner);
+        foreach(var m in PlayerModel)
+        {
+            m.enabled = !IsOwner;
+        }
     }
 
     void Update()

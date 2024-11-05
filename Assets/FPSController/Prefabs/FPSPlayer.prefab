@@ -12316,6 +12316,7 @@ GameObject:
   - component: {fileID: 9210579366318506676}
   - component: {fileID: 6687268273301358202}
   - component: {fileID: 7447929773694690858}
+  - component: {fileID: 8660589748550354112}
   m_Layer: 0
   m_Name: FPSPlayer
   m_TagString: Untagged
@@ -12387,7 +12388,24 @@ MonoBehaviour:
   lookSpeed: 2
   lookXLimit: 90
   canMove: 1
-  Eye: {fileID: 6901496055635506608}
+  PlayerModel:
+  - {fileID: 2751612897966962590}
+  - {fileID: 4088711080877681392}
+  - {fileID: 2707587602942668588}
+  - {fileID: 3527999059019529790}
+  - {fileID: 3541940955874992219}
+  - {fileID: 4540594785810912282}
+  - {fileID: 5420995975642784944}
+  - {fileID: 2541292724138101202}
+  - {fileID: 7890382606603801341}
+  - {fileID: 4691079063290587707}
+  - {fileID: 6862245151384344484}
+  - {fileID: 3953247800985355717}
+  - {fileID: 8479611059586263382}
+  - {fileID: 5585509487035987201}
+  - {fileID: 3432822946905566881}
+  - {fileID: 336344207599562139}
+  - {fileID: 2552552640786135196}
   HatMenu: {fileID: 5974916658590561387}
   animator: {fileID: 4318931217027652905}
 --- !u!143 &9210579366318506676
@@ -12464,6 +12482,21 @@ MultiplayerRolesData:
     m_RolesMask: 3
   - m_Object: {fileID: 9210579366318506675}
     m_RolesMask: 3
+--- !u!114 &8660589748550354112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366318506677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0727d5ae3244e3b569694d3912374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  TransitionStateInfoList: []
+  m_Animator: {fileID: 4318931217027652905}
 --- !u!1 &9210579366455209361
 GameObject:
   m_ObjectHideFlags: 0
@@ -12475,7 +12508,7 @@ GameObject:
   - component: {fileID: 9210579366455209360}
   - component: {fileID: 9210579366455209358}
   - component: {fileID: 9210579366455209359}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12518,7 +12551,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210579366455209361}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12534,7 +12567,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 481993365a141474baa5c312c791c960, type: 2}
+  - {fileID: 2100000, guid: afa9176569d6e144c85333e17996ccd1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12630,7 +12663,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -12673,7 +12706,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
