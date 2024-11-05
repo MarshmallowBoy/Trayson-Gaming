@@ -24,6 +24,7 @@ public class SC_FPSController : NetworkBehaviour
 
     public GameObject Eye;
     public GameObject HatMenu;
+    public Animator animator;
 
     void Start()
     {
@@ -69,6 +70,10 @@ public class SC_FPSController : NetworkBehaviour
             float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = moveDirection.y;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+            Debug.Log(moveDirection.magnitude > 0);
+
+            animator.SetBool("Running", moveDirection.magnitude > 0);
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
             {
