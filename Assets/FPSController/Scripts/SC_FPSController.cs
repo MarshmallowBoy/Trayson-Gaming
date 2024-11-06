@@ -30,7 +30,6 @@ public class SC_FPSController : NetworkBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
