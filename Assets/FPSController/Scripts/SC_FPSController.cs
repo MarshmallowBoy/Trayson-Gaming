@@ -47,6 +47,15 @@ public class SC_FPSController : NetworkBehaviour
         }
     }
 
+    public void SetPosition(Vector3 position)
+    {
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
+    }
+
+
+
     void Update()
     {
         if (IsOwner)
@@ -80,8 +89,6 @@ public class SC_FPSController : NetworkBehaviour
             float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = moveDirection.y;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-            Debug.Log(moveDirection.magnitude > 0);
 
             animator.SetBool("Running", moveDirection.magnitude > 0);
 
