@@ -13,6 +13,7 @@ public class HatMenu : NetworkBehaviour
 
     public void Addhat(int Index)
     {
+        Activehat = Index;
         AddHatSendRpc(Index);
     }
 
@@ -34,13 +35,19 @@ public class HatMenu : NetworkBehaviour
     }
 
 
-    public void OnPlayerConnected()
+
+    public void PlayerConnected(ulong Player)
     {
-        Debug.Log("Player Joined");
+        if(Activehat < 0)
+        {
+            return;
+        }
+        Addhat(Activehat);
     }
 
     void Start()
     {
         gameObject.SetActive(false);
+        NetworkManager.Singleton.OnClientConnectedCallback += PlayerConnected;
     }
 }
