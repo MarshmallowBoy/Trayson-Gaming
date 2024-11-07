@@ -13181,7 +13181,6 @@ GameObject:
   - component: {fileID: 7447929773694690858}
   - component: {fileID: 3966727792006142400}
   - component: {fileID: 6551354611096443153}
-  - component: {fileID: 7518387051732664309}
   - component: {fileID: 5279697182966553239}
   m_Layer: 0
   m_Name: FPSPlayer
@@ -13415,23 +13414,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &7518387051732664309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210579366318506677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  NetworkRigidbodyBaseExpanded: 0
-  UseRigidBodyForMotion: 0
-  AutoUpdateKinematicState: 1
-  AutoSetKinematicOnDespawn: 1
 --- !u!136 &5279697182966553239
 CapsuleCollider:
   m_ObjectHideFlags: 0
