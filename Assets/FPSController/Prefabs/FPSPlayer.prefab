@@ -12993,7 +12993,7 @@ GameObject:
   - component: {fileID: 6796960587651274315}
   m_Layer: 3
   m_Name: Outline
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13250,6 +13250,7 @@ GameObject:
   - component: {fileID: 5279697182966553239}
   - component: {fileID: 2882030333036725125}
   - component: {fileID: 3698419409851358588}
+  - component: {fileID: 5298161729743385680}
   m_Layer: 0
   m_Name: FPSPlayer
   m_TagString: Player
@@ -13538,7 +13539,21 @@ MonoBehaviour:
   Mackerel: {fileID: 6190790585122004078, guid: 979e722bd120a8f4fa6e603a57be1cd4, type: 3}
   Camera: {fileID: 9210579366826673607}
   PositionOffset: 0.5
-  Speed: 2000
+  Speed: 1000
+--- !u!114 &5298161729743385680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366318506677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6699249e3b7e59a4ca72a148b6838996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  characterController: {fileID: 9210579366318506676}
 --- !u!1 &9210579366455209361
 GameObject:
   m_ObjectHideFlags: 0
@@ -13552,7 +13567,7 @@ GameObject:
   - component: {fileID: 9210579366455209359}
   m_Layer: 3
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
