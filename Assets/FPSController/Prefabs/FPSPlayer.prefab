@@ -4979,7 +4979,6 @@ GameObject:
   - component: {fileID: 9216059012808981393}
   - component: {fileID: 4039914562617493282}
   - component: {fileID: 2643936507767802250}
-  - component: {fileID: 6864948855928781057}
   m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
@@ -5055,27 +5054,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6864948855928781057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3777804059580511686}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3804939096193833594
 GameObject:
   m_ObjectHideFlags: 0
@@ -8951,7 +8929,6 @@ GameObject:
   - component: {fileID: 4895962792332428270}
   - component: {fileID: 7996569580935177086}
   - component: {fileID: 4704457144381039468}
-  - component: {fileID: 6167535582659160880}
   m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
@@ -9027,27 +9004,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6167535582659160880
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6494543870337899567}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6499327585535271004
 GameObject:
   m_ObjectHideFlags: 0
@@ -13293,6 +13249,7 @@ GameObject:
   - component: {fileID: 6551354611096443153}
   - component: {fileID: 5279697182966553239}
   - component: {fileID: 2882030333036725125}
+  - component: {fileID: 3698419409851358588}
   m_Layer: 0
   m_Name: FPSPlayer
   m_TagString: Player
@@ -13565,6 +13522,23 @@ MonoBehaviour:
   UseRigidBodyForMotion: 0
   AutoUpdateKinematicState: 1
   AutoSetKinematicOnDespawn: 1
+--- !u!114 &3698419409851358588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366318506677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf5883c81c7a5245a78156effeaaf2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  Mackerel: {fileID: 6190790585122004078, guid: 979e722bd120a8f4fa6e603a57be1cd4, type: 3}
+  Camera: {fileID: 9210579366826673607}
+  PositionOffset: 0.5
+  Speed: 2000
 --- !u!1 &9210579366455209361
 GameObject:
   m_ObjectHideFlags: 0
