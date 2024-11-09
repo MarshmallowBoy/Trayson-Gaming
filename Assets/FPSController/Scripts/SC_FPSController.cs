@@ -24,9 +24,12 @@ public class SC_FPSController : NetworkBehaviour
 
     public Renderer[] PlayerModel;
     public GameObject HatMenu;
+    public GameObject SuitMenu;
     public GameObject HealthBar;
+    public GameObject HealthCamera;
     public Renderer[] Outline;
     public Animator animator;
+    public Animator animator2;
 
     void Start()
     {
@@ -36,6 +39,7 @@ public class SC_FPSController : NetworkBehaviour
         Cursor.visible = false;
         playerCamera.gameObject.SetActive(IsOwner);
         HealthBar.SetActive(IsOwner);
+        HealthCamera.SetActive(IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;
@@ -44,7 +48,8 @@ public class SC_FPSController : NetworkBehaviour
         {
             foreach (var m in PlayerModel)
             {
-                m.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                //m.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                m.gameObject.layer = 6;
             }
         }
     }
@@ -66,6 +71,10 @@ public class SC_FPSController : NetworkBehaviour
             {
                 HatMenu.SetActive(!HatMenu.activeInHierarchy);
                 //AddHatSendRpc();
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                SuitMenu.SetActive(!SuitMenu.activeInHierarchy);
             }
 
             if (Input.GetKeyDown(KeyCode.Tab))
@@ -93,6 +102,7 @@ public class SC_FPSController : NetworkBehaviour
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
             animator.SetBool("Running", moveDirection.magnitude > 0);
+            animator2.SetBool("Running", moveDirection.magnitude > 0);
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
             {
