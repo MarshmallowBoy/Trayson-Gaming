@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2285685100344086593}
   m_Layer: 0
   m_Name: Bone4
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 3365080883642703111}
   m_Layer: 0
   m_Name: Tail
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1665353460959974894}
   m_Layer: 0
   m_Name: Armature
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 1661346367899368489}
   m_Layer: 0
   m_Name: Bone8_end
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 6939226036910313540}
   m_Layer: 0
   m_Name: Bone3
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 5174999301094671514}
   m_Layer: 0
   m_Name: Bone6
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 8455871153462988901}
   m_Layer: 0
   m_Name: Bone1
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 2261582231722770089}
   m_Layer: 0
   m_Name: Tail_end
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 7022314524751604060}
   m_Layer: 0
   m_Name: Mackrel
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,6 +463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07efbb3b3f1ddde4fb1e529d5aef3ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 10
+  Collision: 0
+  HasDoneDamage: 0
 --- !u!114 &7022314524751604060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +491,7 @@ GameObject:
   - component: {fileID: 595072495997489363}
   m_Layer: 0
   m_Name: Bone8
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -541,7 +544,7 @@ GameObject:
   - component: {fileID: 224789060048410840}
   m_Layer: 0
   m_Name: Bone7
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,7 +577,7 @@ GameObject:
   - component: {fileID: 4107429584289093102}
   m_Layer: 0
   m_Name: Bone2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,7 +631,7 @@ GameObject:
   - component: {fileID: 3726756299731012812}
   m_Layer: 0
   m_Name: Plane.005
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -726,7 +729,7 @@ GameObject:
   - component: {fileID: 1298973797062946749}
   m_Layer: 0
   m_Name: Bone5
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

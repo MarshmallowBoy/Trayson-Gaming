@@ -10,22 +10,22 @@ public class FishThrower : NetworkBehaviour
     {
         if (Input.GetButtonDown("Fire1") && IsOwner)
         {
-            ShootSendRpc();
+            ShootSendRpc(Camera.rotation, Camera.transform.forward);
         }
     }
 
     [Rpc(SendTo.Server)]
-    public void ShootSendRpc()
+    public void ShootSendRpc(Quaternion rotation, Vector3 ForwardVector)
     {
-        ShootRpc();
+        ShootRpc(rotation, ForwardVector);
     }
 
     [Rpc(SendTo.ClientsAndHost)]
-    public void ShootRpc()
+    public void ShootRpc(Quaternion rotation, Vector3 ForwardVector)
     {
-        GameObject Fish = Instantiate(Mackerel, Camera.position, Camera.rotation);
-        Fish.transform.position = Camera.transform.position + Camera.transform.forward * PositionOffset;
-        Fish.transform.rotation = Camera.transform.rotation;
-        Fish.GetComponent<Rigidbody>().AddForce(Camera.forward * Speed);
+        GameObject Fish = Instantiate(Mackerel, Camera.position, rotation);
+        Fish.transform.position = Camera.transform.position + ForwardVector * PositionOffset;
+        Fish.transform.rotation = rotation;
+        Fish.GetComponent<Rigidbody>().AddForce(ForwardVector * Speed);
     }
 }

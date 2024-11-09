@@ -24,6 +24,7 @@ public class SC_FPSController : NetworkBehaviour
 
     public Renderer[] PlayerModel;
     public GameObject HatMenu;
+    public GameObject HealthBar;
     public Renderer[] Outline;
     public Animator animator;
 
@@ -34,6 +35,7 @@ public class SC_FPSController : NetworkBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerCamera.gameObject.SetActive(IsOwner);
+        HealthBar.SetActive(IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;
