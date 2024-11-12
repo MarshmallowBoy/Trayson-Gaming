@@ -15,10 +15,8 @@ public class Heath : NetworkBehaviour
 
         if (health < healthLastFrame)
         {
-            Debug.Log("Health: " + health);
-            Debug.Log("Health Last Frame: " + healthLastFrame);
             animator.Play("Damaged");
-            SendSoundRpc();
+            SendUpdateHealthRpc(health);
         }
 
         if (health <= 0)
@@ -32,14 +30,15 @@ public class Heath : NetworkBehaviour
     }
 
     [Rpc(SendTo.Server)]
-    void SendSoundRpc()
+    void SendUpdateHealthRpc(int health1)
     {
-        ReceiveSoundRpc();
+        ReceiveUpdateHealthRpc(health1);
     }
 
     [Rpc(SendTo.ClientsAndHost)]
-    void ReceiveSoundRpc()
+    void ReceiveUpdateHealthRpc(int health1)
     {
         audioSource.Play();
+        health = health1;
     }
 }
