@@ -13,11 +13,12 @@ public class Heath : NetworkBehaviour
     {
         healthSlider.value = health;
 
+        /*
         if (health < healthLastFrame)
         {
             animator.Play("Damaged");
             SendUpdateHealthRpc(health);
-        }
+        }*/
 
         if (health <= 0)
         {
@@ -27,6 +28,11 @@ public class Heath : NetworkBehaviour
             health = 100;
         }
         healthLastFrame = health;
+    }
+
+    public void DoDamage(int Damage)
+    {
+        SendUpdateHealthRpc(health - Damage);
     }
 
     [Rpc(SendTo.Server)]
