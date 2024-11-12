@@ -25,12 +25,14 @@ public class SC_FPSController : NetworkBehaviour
     public Renderer[] PlayerModel;
     public GameObject HatMenu;
     public GameObject SuitMenu;
+    public GameObject TrailsMenu;
     public GameObject HealthBar;
     public GameObject HealthCamera;
+    public GameObject DamageVignette;
     public Renderer[] Outline;
     public Animator animator;
     public Animator animator2;
-
+    public FishThrower fishThrower;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -40,6 +42,7 @@ public class SC_FPSController : NetworkBehaviour
         playerCamera.gameObject.SetActive(IsOwner);
         HealthBar.SetActive(IsOwner);
         HealthCamera.SetActive(IsOwner);
+        DamageVignette.SetActive(IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;
@@ -76,6 +79,11 @@ public class SC_FPSController : NetworkBehaviour
             {
                 SuitMenu.SetActive(!SuitMenu.activeInHierarchy);
             }
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                TrailsMenu.SetActive(!TrailsMenu.activeInHierarchy);
+            }
+
 
             if (Input.GetKeyDown(KeyCode.Tab))
             {
@@ -89,7 +97,9 @@ public class SC_FPSController : NetworkBehaviour
                     Cursor.lockState = CursorLockMode.Locked;
                 }
                 canMove = !Cursor.visible;
+                fishThrower.enabled = !Cursor.visible;
             }
+
 
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
