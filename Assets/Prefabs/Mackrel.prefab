@@ -449,8 +449,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.17014688, y: 0.21882054, z: 0.5626167}
-  m_Center: {x: -0.004853759, y: 0.008413643, z: 0.33671612}
+  m_Size: {x: 0.5888403, y: 0.21882054, z: 0.5626167}
+  m_Center: {x: -0.0064083636, y: 0.008413643, z: 0.33671612}
 --- !u!114 &2056849385852599558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 10
   Collision: 0
-  HasDoneDamage: 0
+  ID: 0
 --- !u!114 &7022314524751604060
 MonoBehaviour:
   m_ObjectHideFlags: 0
