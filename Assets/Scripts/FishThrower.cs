@@ -4,7 +4,6 @@ public class FishThrower : NetworkBehaviour
 {
     public GameObject Mackerel;
     public Transform Camera;
-    public float PositionOffset;
     public float Speed = 5000;
     public ulong ID;
     public NetworkObject networkObject;
@@ -44,7 +43,7 @@ public class FishThrower : NetworkBehaviour
     public void ShootRpc(Quaternion rotation, Vector3 ForwardVector, ulong PlayerID)
     {
         GameObject Fish = Instantiate(Mackerel, Camera.position, rotation);
-        Fish.transform.position = Camera.transform.position + ForwardVector * PositionOffset;
+        Fish.transform.position = Camera.transform.position + ForwardVector;
         Fish.transform.rotation = rotation;
         Fish.GetComponent<Rigidbody>().AddForce(ForwardVector * Speed);
         Fish.GetComponent<Bullet>().ID = PlayerID;
