@@ -6,13 +6,6 @@ public class Bullet : MonoBehaviour
     public bool Collision = false;
     public ulong ID;
     public bool Damaged = false;
-    public float Speed = 1400;
-
-    private void Start()
-    {
-        GetComponent<Rigidbody>().AddForce(transform.forward * Speed);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !Damaged)

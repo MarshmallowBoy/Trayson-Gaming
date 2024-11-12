@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4976823600121733718}
   - component: {fileID: 2285685100344086593}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone4
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3678252517561471697}
   - component: {fileID: 3365080883642703111}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Tail
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1665353460959974894}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Armature
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661346367899368489}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone8_end
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5520257957063108192}
   - component: {fileID: 6939226036910313540}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone3
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5174999301094671514}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone6
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4194147566146436016}
   - component: {fileID: 8455871153462988901}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2261582231722770089}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Tail_end
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -357,10 +357,7 @@ GameObject:
   - component: {fileID: 7807885221389022677}
   - component: {fileID: 2056849385852599558}
   - component: {fileID: 7022314524751604060}
-  - component: {fileID: 6805965421727874014}
-  - component: {fileID: 1026167042116365238}
-  - component: {fileID: 2187606060073426438}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Mackrel
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -469,8 +466,6 @@ MonoBehaviour:
   Damage: 10
   Collision: 0
   ID: 0
-  Damaged: 0
-  Speed: 1400
 --- !u!114 &7022314524751604060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,84 +479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seconds: 10
---- !u!114 &6805965421727874014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6190790585122004078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 695480849
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  DeferredDespawnTick: 0
-  Ownership: 1
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
-  SyncOwnerTransformWhenParented: 1
-  AllowOwnerToParent: 0
---- !u!114 &1026167042116365238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6190790585122004078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  NetworkTransformExpanded: 0
-  AuthorityMode: 0
-  TickSyncChildren: 0
-  UseUnreliableDeltas: 0
-  SyncPositionX: 1
-  SyncPositionY: 1
-  SyncPositionZ: 1
-  SyncRotAngleX: 1
-  SyncRotAngleY: 1
-  SyncRotAngleZ: 1
-  SyncScaleX: 1
-  SyncScaleY: 1
-  SyncScaleZ: 1
-  PositionThreshold: 0.001
-  RotAngleThreshold: 0.01
-  ScaleThreshold: 0.01
-  UseQuaternionSynchronization: 0
-  UseQuaternionCompression: 0
-  UseHalfFloatPrecision: 0
-  InLocalSpace: 0
-  SwitchTransformSpaceWhenParented: 0
-  Interpolate: 1
-  SlerpPosition: 0
---- !u!114 &2187606060073426438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6190790585122004078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  NetworkRigidbodyBaseExpanded: 0
-  UseRigidBodyForMotion: 0
-  AutoUpdateKinematicState: 1
-  AutoSetKinematicOnDespawn: 1
 --- !u!1 &6693828976518665859
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7716456515589086067}
   - component: {fileID: 595072495997489363}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone8
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -625,7 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224789060048410840}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone7
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -658,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6466412729475041057}
   - component: {fileID: 4107429584289093102}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -712,7 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7609276821190386072}
   - component: {fileID: 3726756299731012812}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Plane.005
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -810,7 +727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9058247838509468248}
   - component: {fileID: 1298973797062946749}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Bone5
   m_TagString: Bullet
   m_Icon: {fileID: 0}
