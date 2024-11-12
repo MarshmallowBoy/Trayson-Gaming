@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Heath : NetworkBehaviour
 {
     public int health = 100;
-    int healthLastFrame;
+    int healthLastFrame = 100;
     public Slider healthSlider;
     public CharacterController characterController;
     public Animator animator;
