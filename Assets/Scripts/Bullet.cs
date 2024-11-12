@@ -4,11 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public int Damage = 10;
     public bool Collision = false;
-    public bool HasDoneDamage = false;
-    private void Start()
-    {
-        Invoke("EnableDamage", 0.02f);
-    }
+    public ulong ID;
 
     void EnableDamage()
     {
@@ -17,10 +13,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && Collision && !HasDoneDamage)
+        if (other.CompareTag("Player") && Collision)
         {
+            if (other.GetComponent<FishThrower>().ID == ID)
+            {
+                return;
+            }
             other.gameObject.GetComponent<Heath>().health -= Damage;
-            HasDoneDamage = true;
             Destroy(gameObject);
         }
         if(!other.CompareTag("Player") && !other.CompareTag("Bullet"))
