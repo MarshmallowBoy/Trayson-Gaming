@@ -15,6 +15,8 @@ public class Heath : NetworkBehaviour
 
         if (health < healthLastFrame)
         {
+            Debug.Log("Health: " + health);
+            Debug.Log("Health Last Frame: " + healthLastFrame);
             animator.Play("Damaged");
             SendSoundRpc();
         }
