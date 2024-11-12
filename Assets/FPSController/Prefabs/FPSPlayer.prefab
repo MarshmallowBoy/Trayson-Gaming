@@ -38288,7 +38288,7 @@ MonoBehaviour:
   Mackerel: {fileID: 6190790585122004078, guid: 979e722bd120a8f4fa6e603a57be1cd4, type: 3}
   Camera: {fileID: 9210579366826673607}
   PositionOffset: 0.5
-  Speed: 1000
+  Speed: 1400
   ID: 0
   networkObject: {fileID: 4771669613562961912}
 --- !u!114 &5298161729743385680
