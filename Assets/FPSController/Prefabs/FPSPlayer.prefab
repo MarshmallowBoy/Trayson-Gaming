@@ -3164,10 +3164,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
@@ -9213,7 +9213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4014150368207651436}
+  - {fileID: 9039729885520242847}
   m_Father: {fileID: 9210579366455209360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4420361062536389820
@@ -16330,7 +16330,7 @@ GameObject:
   - component: {fileID: 7595326232481225}
   - component: {fileID: 2881754698671110403}
   m_Layer: 0
-  m_Name: Sombero
+  m_Name: Farmer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16346,10 +16346,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.8058381, y: -0, z: -0, w: 0.59213597}
   m_LocalPosition: {x: 0, y: 0.47500002, z: 0.025}
-  m_LocalScale: {x: 0.32058433, y: 0.32058427, z: 0.32058427}
+  m_LocalScale: {x: 0.32058433, y: 0.3205842, z: 0.3205842}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 418336381022099910}
+  m_Father: {fileID: 2692400510502152108}
   m_LocalEulerAnglesHint: {x: -107.383, y: 0, z: 0}
 --- !u!33 &7595326232481225
 MeshFilter:
@@ -20797,7 +20797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Null
+  m_text: Farmer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20824,10 +20824,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
@@ -23195,7 +23195,7 @@ MonoBehaviour:
   - {fileID: 5492212337386674365}
   - {fileID: 2273486402919989861}
   - {fileID: 2414495264604224209}
-  - {fileID: 3804939096193833594}
+  - {fileID: 8637104025826403750}
   - {fileID: 3804939096193833594}
   - {fileID: 3804939096193833594}
   - {fileID: 3804939096193833594}
@@ -34487,6 +34487,96 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &8518632101151175205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9039729885520242847}
+  - component: {fileID: 5394267795899131706}
+  - component: {fileID: 7870250025374536688}
+  m_Layer: 0
+  m_Name: Sombrero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9039729885520242847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518632101151175205}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.79360574, y: -0.035144653, z: 0.046049956, w: 0.6056684}
+  m_LocalPosition: {x: -0.021, y: 0.499, z: 0.015}
+  m_LocalScale: {x: 0.27066445, y: 0.27066445, z: 0.27066445}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 418336381022099910}
+  m_LocalEulerAnglesHint: {x: -106.647, y: 23.811996, z: -22.919006}
+--- !u!33 &5394267795899131706
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518632101151175205}
+  m_Mesh: {fileID: 4711208715938537054, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+--- !u!23 &7870250025374536688
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518632101151175205}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -6478536213147159724, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+  - {fileID: 4874126678125670354, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+  - {fileID: -6629797300637803691, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+  - {fileID: -6922793697723135513, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+  - {fileID: -3846018093981099296, guid: b011c03433fb8db4ea32f1fcf57e7f0c, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8526995447726093567
 GameObject:
   m_ObjectHideFlags: 0
@@ -35200,6 +35290,38 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8637104025826403750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2692400510502152108}
+  m_Layer: 3
+  m_Name: Hat7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2692400510502152108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637104025826403750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4014150368207651436}
+  m_Father: {fileID: 9210579366455209360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8658814340517965364
 GameObject:
   m_ObjectHideFlags: 0
@@ -37980,6 +38102,7 @@ MonoBehaviour:
   - {fileID: 3568367228596240934}
   - {fileID: 2138730780478467667}
   - {fileID: 1023969935309075586}
+  - {fileID: 7870250025374536688}
   HatMenu: {fileID: 5974916658590561387}
   SuitMenu: {fileID: 7193582939269942600}
   TrailsMenu: {fileID: 2859034271063312287}
@@ -38321,6 +38444,7 @@ Transform:
   - {fileID: 470269106332199158}
   - {fileID: 418336381022099910}
   - {fileID: 4143597618400106814}
+  - {fileID: 2692400510502152108}
   - {fileID: 9073411319316329673}
   - {fileID: 1028694945763963472}
   - {fileID: 3824866721624089991}
