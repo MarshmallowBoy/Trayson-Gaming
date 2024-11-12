@@ -29,7 +29,11 @@ public class FishThrower : NetworkBehaviour
     {
         if (Input.GetButtonDown("Fire1") && IsOwner)
         {
-            ShootSendRpc(Camera.rotation, Camera.transform.forward, ID);
+            //ShootSendRpc(Camera.rotation, Camera.transform.forward, ID);
+            var instance = Instantiate(Mackerel, Camera.position, Camera.rotation);
+            instance.GetComponent<Bullet>().ID = ID;
+            var instanceNetworkObject = instance.GetComponent<NetworkObject>();
+            instanceNetworkObject.Spawn();
         }
     }
 
