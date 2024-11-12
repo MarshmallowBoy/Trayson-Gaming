@@ -38289,6 +38289,8 @@ MonoBehaviour:
   Camera: {fileID: 9210579366826673607}
   PositionOffset: 0.5
   Speed: 1000
+  ID: 0
+  networkObject: {fileID: 4771669613562961912}
 --- !u!114 &5298161729743385680
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,10 +7,11 @@ public class FishThrower : NetworkBehaviour
     public float PositionOffset;
     public float Speed = 5000;
     public ulong ID;
+    public NetworkObject networkObject;
 
     public void Start()
     {
-        SendSetIdRpc(NetworkManager.Singleton.LocalClientId);
+        SendSetIdRpc(networkObject.NetworkObjectId);
     }
 
     [Rpc(SendTo.Server)]
