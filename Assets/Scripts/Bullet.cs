@@ -6,14 +6,9 @@ public class Bullet : MonoBehaviour
     public bool Collision = false;
     public ulong ID;
 
-    void EnableDamage()
-    {
-        Collision = true;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && Collision)
+        if (other.CompareTag("Player"))
         {
             if (other.GetComponent<FishThrower>().ID == ID)
             {
