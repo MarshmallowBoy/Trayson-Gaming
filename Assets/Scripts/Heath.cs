@@ -44,7 +44,8 @@ public class Heath : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     void ReceiveUpdateHealthRpc(int health1)
     {
-        audioSource.Play();
+        audioSource.Play(); 
+        animator.Play("Damaged");
         health = health1;
     }
 }
