@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 using Unity.Networking;
+using Dissonance.Audio.Capture;
 [RequireComponent(typeof(CharacterController))]
 
 public class SC_FPSController : NetworkBehaviour
@@ -33,6 +34,8 @@ public class SC_FPSController : NetworkBehaviour
     public Animator animator;
     public Animator animator2;
     public FishThrower fishThrower;
+
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -112,6 +115,7 @@ public class SC_FPSController : NetworkBehaviour
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
             animator.SetBool("Running", moveDirection.magnitude > 0);
+            animator.SetBool("IsRecordingVoice", GameObject.Find("---DissonanceComms---").GetComponent<BasicMicrophoneCapture>().IsRecording);
             animator2.SetBool("Running", moveDirection.magnitude > 0);
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
