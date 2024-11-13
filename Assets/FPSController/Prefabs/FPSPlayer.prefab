@@ -37954,6 +37954,7 @@ GameObject:
   - component: {fileID: 5298161729743385680}
   - component: {fileID: 4156231456826749447}
   - component: {fileID: 3638350254583194803}
+  - component: {fileID: 3228348991786088481}
   m_Layer: 6
   m_Name: FPSPlayer
   m_TagString: Player
@@ -38426,6 +38427,19 @@ MonoBehaviour:
   _roomExpanded: 1
   _tokensExpanded: 0
   _colliderExpanded: 0
+--- !u!114 &3228348991786088481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366318506677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06a892ac1d6c864dad7c6c575b6e640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!1 &9210579366455209361
 GameObject:
   m_ObjectHideFlags: 0
