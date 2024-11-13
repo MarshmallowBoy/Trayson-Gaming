@@ -38421,7 +38421,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tokens:
-    _tokens: []
+    _tokens:
+    - New Token
   _channelTypeExpanded: 1
   _metadataExpanded: 0
   _activationModeExpanded: 1
@@ -38457,7 +38458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tokens:
-    _tokens: []
+    _tokens:
+    - New Token
   _roomExpanded: 1
   _tokensExpanded: 1
   _colliderExpanded: 1
