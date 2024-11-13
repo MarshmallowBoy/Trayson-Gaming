@@ -38821,7 +38821,6 @@ MonoBehaviour:
   HealthCamera: {fileID: 7537312705199621353}
   DamageVignette: {fileID: 3188479908616415346}
   Outline:
-  - {fileID: 9210579366455209359}
   - {fileID: 2643936507767802250}
   - {fileID: 4704457144381039468}
   animator: {fileID: 4318931217027652905}
