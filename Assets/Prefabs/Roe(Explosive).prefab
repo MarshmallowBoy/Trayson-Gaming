@@ -271,8 +271,9 @@ GameObject:
   - component: {fileID: 9189211265052219651}
   - component: {fileID: 6847452035318707845}
   - component: {fileID: 7475082151837825959}
+  - component: {fileID: -3813310465176738085}
   m_Layer: 0
-  m_Name: Roe
+  m_Name: Roe(Explosive)
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +362,7 @@ MonoBehaviour:
   Collision: 0
   ID: 0
   Damaged: 0
-  DestroyOnTouch: 0
+  DestroyOnTouch: 1
 --- !u!114 &7475082151837825959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +376,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seconds: 10
+--- !u!114 &-3813310465176738085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974584475552059751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931a32a535eb04e4fb32d19d328b355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 1828176872806910, guid: c34359a96a1fde744b246eb5c613b0b9, type: 3}
+  ExplosionRadius: 1
+  force: 5
+  DirectionBias: {x: 0, y: 0, z: 0}
 --- !u!1 &9179602589330214435
 GameObject:
   m_ObjectHideFlags: 0
