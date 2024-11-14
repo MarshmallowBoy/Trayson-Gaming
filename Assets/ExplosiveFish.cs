@@ -13,7 +13,7 @@ public class ExplosiveFish : MonoBehaviour
         {
             if (Coll.CompareTag("Player"))
             {
-                Coll.gameObject.GetComponent<SC_FPSController>().ExternalVector = (((Coll.transform.position - transform.position).normalized + DirectionBias) * force) / Vector3.Distance(Coll.transform.position, transform.position);
+                Coll.gameObject.GetComponent<SC_FPSController>().ExternalVector = (((Coll.transform.position - transform.position).normalized + DirectionBias) * force) / (Vector3.Distance(Coll.transform.position, transform.position)+1);
             }
         }
         
