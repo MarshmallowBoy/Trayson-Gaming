@@ -38814,7 +38814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3145855002
+  GlobalObjectIdHash: 3019199272
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -38847,6 +38847,9 @@ MonoBehaviour:
   playerCamera: {fileID: 9210579366826673605}
   lookSpeed: 2
   lookXLimit: 90
+  resistance: 3
+  forceLimit: 0
+  ExternalVector: {x: 0, y: 0, z: 0}
   canMove: 1
   PlayerModel:
   - {fileID: 2751612897966962590}
@@ -39114,7 +39117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  Mackerel: {fileID: 6190790585122004078, guid: 979e722bd120a8f4fa6e603a57be1cd4, type: 3}
+  Mackerel: {fileID: 6190790585122004078, guid: 726d2a7ff78436a4fb132e6d66540bb5, type: 3}
   Camera: {fileID: 9210579366826673607}
   Speed: 1400
   ID: 0

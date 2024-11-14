@@ -16,9 +16,12 @@ public class SC_FPSController : NetworkBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
+    public float resistance;
+    public float forceLimit;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
+    public Vector3 ExternalVector = Vector3.zero;
     float rotationX = 0;
 
     [HideInInspector]
@@ -35,7 +38,6 @@ public class SC_FPSController : NetworkBehaviour
     public Animator animator;
     public Animator animator2;
     public FishThrower fishThrower;
-
 
     void Start()
     {
@@ -136,8 +138,15 @@ public class SC_FPSController : NetworkBehaviour
                 moveDirection.y -= gravity * Time.deltaTime;
             }
 
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                ExternalVector = new Vector3(1, 1, 1) * 10;
+            }
+            ExternalVector += -ExternalVector * Time.deltaTime * resistance;
+            if (ExternalVector.magnitude <= forceLimit) { ExternalVector = Vector3.zero; }
+
             // Move the controller
-            characterController.Move(moveDirection * Time.deltaTime);
+            characterController.Move((moveDirection + ExternalVector) * Time.deltaTime);
 
             // Player and Camera rotation
             if (canMove)

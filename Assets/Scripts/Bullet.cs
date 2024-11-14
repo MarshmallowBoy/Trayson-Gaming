@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     public bool Collision = false;
     public ulong ID;
     public bool Damaged = false;
+    public bool DestroyOnTouch;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !Damaged)
@@ -22,6 +23,10 @@ public class Bullet : MonoBehaviour
         if(!other.CompareTag("Player") && !other.CompareTag("Bullet"))
         {
             Damage = 0;
+            if (DestroyOnTouch)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
