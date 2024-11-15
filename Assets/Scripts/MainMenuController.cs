@@ -14,6 +14,8 @@ public class MainMenuController : MonoBehaviour
     public Button optionsButton;
     public Button hostButton;
     public Button clientButton;
+    public Button contButton;
+    public Button cont1Button;
     public Button quitButton;
     public GameObject optionsPanel;  // If you have an options menu as a panel
 
@@ -26,7 +28,9 @@ public class MainMenuController : MonoBehaviour
         backButton.onClick.AddListener(OnBackButtonClicked);
         back2Button.onClick.AddListener(OnBackButtonClicked);
         hostButton.onClick.AddListener(OnHostButtonClicked);
-        clientButton.onClick.AddListener(OnClientButtonClicked);
+        clientButton.onClick.AddListener(OnHostButtonClicked);
+        contButton.onClick.AddListener(OnContinueButtonClicked);
+        cont1Button.onClick.AddListener(OnContinueButtonClicked);
         quitButton.onClick.AddListener(OnQuitButtonClicked);
         if(playCanvas != null)
         {
@@ -77,9 +81,11 @@ public class MainMenuController : MonoBehaviour
         playCanvas.enabled = false;
     }
 
-    void OnClientButtonClicked()
+    void OnContinueButtonClicked()
     {
+        canvas.enabled = false;
         playCanvas.enabled = false;
+        pauseCanvas.enabled = false;
     }
 
     // Show or hide the options menu
