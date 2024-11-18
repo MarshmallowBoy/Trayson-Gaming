@@ -330,6 +330,7 @@ MonoBehaviour:
   ExplosionRadius: 10
   force: 50
   DirectionBias: {x: 0, y: 1, z: 0}
+  ExplosionDamage: 30
 --- !u!1 &3541513008507684328
 GameObject:
   m_ObjectHideFlags: 0
