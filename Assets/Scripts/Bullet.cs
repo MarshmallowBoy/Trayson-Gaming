@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.ProBuilder.Shapes;
+using UnityEngine.Rendering.VirtualTexturing;
 
 public class Bullet : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class Bullet : MonoBehaviour
     public ulong ID;
     public bool Damaged = false;
     public bool DestroyOnTouch;
+    public ParticleSystem[] NonDestroyParticles;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !Damaged)
@@ -25,6 +28,16 @@ public class Bullet : MonoBehaviour
             Damage = 0;
             if (DestroyOnTouch)
             {
+                if (NonDestroyParticles.Length > 0)
+                {
+                    foreach (var particle in NonDestroyParticles)
+                    {
+                        var em = particle.emission;
+                        em.enabled = false;
+                        particle.transform.parent = null;
+                        particle.transform.localScale = Vector3.one;
+                    }
+                }
                 Destroy(gameObject);
             }
         }
