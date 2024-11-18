@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 915396251693871426, guid: d0ab77136ec09894ab4d10eeb2ea9627, type: 3}
+  - {fileID: 2100000, guid: 90830a98d20f68d4bbbd87a4eca7dcfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Explosion: {fileID: 1828176872806910, guid: c34359a96a1fde744b246eb5c613b0b9, type: 3}
-  ExplosionRadius: 10
-  force: 50
+  ExplosionRadius: 15
+  force: 2
   DirectionBias: {x: 0, y: 1, z: 0}
   ExplosionDamage: 30
 --- !u!1 &3541513008507684328
@@ -653,7 +653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 915396251693871426, guid: d0ab77136ec09894ab4d10eeb2ea9627, type: 3}
+  - {fileID: 2100000, guid: 90830a98d20f68d4bbbd87a4eca7dcfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -825,7 +825,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 915396251693871426, guid: d0ab77136ec09894ab4d10eeb2ea9627, type: 3}
+  - {fileID: 2100000, guid: 90830a98d20f68d4bbbd87a4eca7dcfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
