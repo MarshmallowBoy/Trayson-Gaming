@@ -20,7 +20,7 @@ public class ExplosiveFish : MonoBehaviour
                 {
                     return;
                 }
-                Coll.transform.GetComponent<Heath>().health -= Mathf.RoundToInt(ExplosionDamage / ((Vector3.Distance(Coll.transform.position, transform.position))/ExplosionRadius));
+                Coll.transform.GetComponent<Heath>().health -= Mathf.RoundToInt(ExplosionDamage / ((Vector3.Distance(Coll.transform.position, transform.position) + 5)/ExplosionRadius));
             }
         }
         
