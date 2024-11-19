@@ -82,7 +82,7 @@ public class SC_FPSController : NetworkBehaviour
         {
             YourOnThinIcePal = false;
             RaycastHit _hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out _hit, 1))
+            if (Physics.Raycast(transform.position, Vector3.down, out _hit, 0.1f))
             {
                 if (_hit.transform.CompareTag("Ice"))
                 {
