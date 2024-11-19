@@ -38847,9 +38847,12 @@ MonoBehaviour:
   playerCamera: {fileID: 9210579366826673605}
   lookSpeed: 2
   lookXLimit: 90
-  resistance: 3
+  resistance: 0
   forceLimit: 0
+  YourOnThinIcePal: 0
+  moveDirection: {x: 0, y: 0, z: 0}
   ExternalVector: {x: 0, y: 0, z: 0}
+  moveLastDirection: {x: 0, y: 0, z: 0}
   canMove: 1
   PlayerModel:
   - {fileID: 2751612897966962590}
@@ -39117,7 +39120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  Mackerel: {fileID: 2654863965844818017, guid: 3f572677a36272e4792fab247141be38, type: 3}
+  Mackerel: {fileID: 6190790585122004078, guid: 979e722bd120a8f4fa6e603a57be1cd4, type: 3}
   Camera: {fileID: 9210579366826673607}
   Speed: 1400
   ID: 0

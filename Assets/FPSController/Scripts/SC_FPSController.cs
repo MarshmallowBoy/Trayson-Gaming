@@ -5,6 +5,7 @@ using Unity.Netcode;
 using Unity.Networking;
 using Dissonance.Audio.Capture;
 using Dissonance;
+using System;
 [RequireComponent(typeof(CharacterController))]
 
 public class SC_FPSController : NetworkBehaviour
@@ -18,11 +19,14 @@ public class SC_FPSController : NetworkBehaviour
     public float lookXLimit = 45.0f;
     public float resistance;
     public float forceLimit;
+    public bool YourOnThinIcePal;
 
     CharacterController characterController;
-    Vector3 moveDirection = Vector3.zero;
+    public Vector3 moveDirection = Vector3.zero;
     public Vector3 ExternalVector = Vector3.zero;
     float rotationX = 0;
+    bool MovingLastFrame = false;
+    public Vector3 moveLastDirection = Vector3.zero;
 
     [HideInInspector]
     public bool canMove = true;
@@ -76,6 +80,16 @@ public class SC_FPSController : NetworkBehaviour
     {
         if (IsOwner)
         {
+            YourOnThinIcePal = false;
+            RaycastHit _hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out _hit, 1))
+            {
+                if (_hit.transform.CompareTag("Ice"))
+                {
+                    YourOnThinIcePal = true;
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.H))
             {
                 HatMenu.SetActive(!HatMenu.activeInHierarchy);
@@ -116,10 +130,22 @@ public class SC_FPSController : NetworkBehaviour
             float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = moveDirection.y;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+            Vector3 TrueMoveDirection = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
+            //int Moving = Mathf.RoundToInt(moveDirection.normalized.magnitude);
+            bool Moving = Convert.ToBoolean(Mathf.RoundToInt(Input.GetAxis("Vertical"))) || Convert.ToBoolean(Mathf.RoundToInt(Input.GetAxis("Horizontal")));
+            Debug.Log(Moving);
 
             animator.SetBool("Running", moveDirection.magnitude > 0);
             animator.SetBool("IsRecordingVoice", GameObject.Find("---DissonanceComms---").GetComponent<VoiceProximityBroadcastTrigger>().IsTransmitting);
             animator2.SetBool("Running", moveDirection.magnitude > 0);
+
+            if (YourOnThinIcePal && Moving)
+            {
+                ExternalVector = moveDirection;
+            }
+
+            if (YourOnThinIcePal) { resistance = 0;}
+            else { resistance = 3;}
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
             {
@@ -138,12 +164,8 @@ public class SC_FPSController : NetworkBehaviour
                 moveDirection.y -= gravity * Time.deltaTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                ExternalVector = new Vector3(1, 1, 1) * 10;
-            }
             ExternalVector += -ExternalVector * Time.deltaTime * resistance;
-            if (ExternalVector.magnitude <= forceLimit) { ExternalVector = Vector3.zero; }
+            if (ExternalVector.magnitude <= 0) { ExternalVector = Vector3.zero; }
 
             // Move the controller
             characterController.Move((moveDirection + ExternalVector) * Time.deltaTime);
@@ -156,6 +178,7 @@ public class SC_FPSController : NetworkBehaviour
                 playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
                 transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
             }
+            MovingLastFrame = Moving;
         }
     }
 
