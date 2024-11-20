@@ -463,9 +463,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07efbb3b3f1ddde4fb1e529d5aef3ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 200
   Collision: 0
   ID: 0
+  Damaged: 0
+  DestroyOnTouch: 0
+  NonDestroyParticles: []
 --- !u!114 &7022314524751604060
 MonoBehaviour:
   m_ObjectHideFlags: 0
