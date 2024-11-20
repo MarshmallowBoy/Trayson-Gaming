@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.21223079, g: 0.22696589, b: 0.2581829, a: 1}
+  m_AmbientEquatorColor: {r: 0.21223079, g: 0.22696589, b: 0.2581829, a: 1}
+  m_AmbientGroundColor: {r: 0.21223079, g: 0.22696589, b: 0.2581829, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -12996,7 +12996,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640189349}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4af7a747db1ae5e42937adc27992839b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -18448,19 +18448,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.9914442
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.1305318
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18468,7 +18468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 344.999
       objectReference: {fileID: 0}
     - target: {fileID: 2928302366761362483, guid: ea28c864282de0e43b59406d95062e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
