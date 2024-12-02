@@ -42,7 +42,7 @@ public class SC_FPSController : NetworkBehaviour
     public Animator animator;
     public Animator animator2;
     public FishThrower fishThrower;
-
+    public GameObject Preview;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -118,6 +118,7 @@ public class SC_FPSController : NetworkBehaviour
                 }
                 canMove = !Cursor.visible;
                 fishThrower.enabled = !Cursor.visible;
+                Preview.SetActive(Cursor.visible);
             }
 
 
