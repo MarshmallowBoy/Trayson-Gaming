@@ -42010,6 +42010,7 @@ MonoBehaviour:
   animator2: {fileID: 8693653239950111090}
   fishThrower: {fileID: 3698419409851358588}
   Preview: {fileID: 3305866303100974173}
+  PreviewCamera: {fileID: 3512171649803714788}
 --- !u!143 &9210579366318506676
 CharacterController:
   m_ObjectHideFlags: 0

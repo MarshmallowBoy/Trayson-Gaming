@@ -43,6 +43,7 @@ public class SC_FPSController : NetworkBehaviour
     public Animator animator2;
     public FishThrower fishThrower;
     public GameObject Preview;
+    public GameObject PreviewCamera;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -53,6 +54,7 @@ public class SC_FPSController : NetworkBehaviour
         HealthBar.SetActive(IsOwner);
         HealthCamera.SetActive(IsOwner);
         DamageVignette.SetActive(IsOwner);
+        PreviewCamera.SetActive(IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;
