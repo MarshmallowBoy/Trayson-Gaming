@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07efbb3b3f1ddde4fb1e529d5aef3ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
+  Damage: 10
   Collision: 0
   ID: 0
   Damaged: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   ExplosionRadius: 15
   force: 2
   DirectionBias: {x: 0, y: 1, z: 0}
-  ExplosionDamage: 0
+  ExplosionDamage: 30
 --- !u!1 &3541513008507684328
 GameObject:
   m_ObjectHideFlags: 0
