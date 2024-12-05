@@ -1,3 +1,4 @@
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
 using UnityEngine.Rendering.VirtualTexturing;
@@ -14,7 +15,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Player") && !Damaged)
         {
-            if (other.GetComponent<FishThrower>().ID == ID)
+            if (other.GetComponent<NetworkObject>().NetworkObjectId == ID)
             {
                 return;
             }

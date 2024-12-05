@@ -41,7 +41,7 @@ public class SC_FPSController : NetworkBehaviour
     public Renderer[] Outline;
     public Animator animator;
     public Animator animator2;
-    public FishThrower fishThrower;
+    public GameObject Weapons;
     public GameObject Preview;
     public GameObject PreviewCamera;
     void Start()
@@ -119,7 +119,7 @@ public class SC_FPSController : NetworkBehaviour
                     Cursor.lockState = CursorLockMode.Locked;
                 }
                 canMove = !Cursor.visible;
-                fishThrower.enabled = !Cursor.visible;
+                Weapons.SetActive(!Cursor.visible);
                 Preview.SetActive(Cursor.visible);
             }
 
@@ -136,7 +136,6 @@ public class SC_FPSController : NetworkBehaviour
             Vector3 TrueMoveDirection = new Vector3(Input.GetAxis("Vertical"), 0, Input.GetAxis("Horizontal"));
             //int Moving = Mathf.RoundToInt(moveDirection.normalized.magnitude);
             bool Moving = Convert.ToBoolean(Mathf.RoundToInt(Input.GetAxis("Vertical"))) || Convert.ToBoolean(Mathf.RoundToInt(Input.GetAxis("Horizontal")));
-            Debug.Log(Moving);
 
             animator.SetBool("Running", moveDirection.magnitude > 0);
             animator.SetBool("IsRecordingVoice", GameObject.Find("---DissonanceComms---").GetComponent<VoiceProximityBroadcastTrigger>().IsTransmitting);
