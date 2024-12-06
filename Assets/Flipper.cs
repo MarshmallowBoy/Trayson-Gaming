@@ -29,13 +29,10 @@ public class Flipper : NetworkBehaviour
             {
                 if (_hit.transform.GetComponent<NetworkObject>().OwnerClientId != NetworkObjectMain.OwnerClientId)
                 {
-                    Debug.Log("PlayerID: " + _hit.transform.GetComponent<NetworkObject>().OwnerClientId);
                     _hit.transform.GetComponent<Heath>().DoDamage(Damage);
-                    //_hit.transform.GetComponent<SC_FPSController>().ExternalVector = (transform.position - _hit.transform.position).normalized * Knockback;
                     SendExternalVectorRpc(_hit.transform.GetComponent<NetworkObject>().OwnerClientId, (_hit.transform.position - (transform.position + (Vector3.down * 1.5f))).normalized * Knockback);
                 }
             }
-            Debug.Log(_hit.transform.name);
         }
     }
     [Rpc(SendTo.Server)]
@@ -48,6 +45,5 @@ public class Flipper : NetworkBehaviour
     void ReceiveExternalVectorRpc(ulong ID, Vector3 ExternalVector)
     {
         NetworkManager.Singleton.ConnectedClients[ID].PlayerObject.GetComponent<SC_FPSController>().ExternalVector = ExternalVector;
-        Debug.Log(NetworkManager.Singleton.ConnectedClients[ID].PlayerObject.name);
     }
 }

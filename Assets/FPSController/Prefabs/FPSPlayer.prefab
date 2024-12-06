@@ -1349,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8205197696960000710
 Transform:
   m_ObjectHideFlags: 0
@@ -42828,7 +42828,7 @@ MonoBehaviour:
   NetworkObjectMain: {fileID: 4771669613562961912}
   Damage: 15
   Delay: 1
-  Knockback: 1000
+  Knockback: 100
 --- !u!1001 &6641112464562588077
 PrefabInstance:
   m_ObjectHideFlags: 0
