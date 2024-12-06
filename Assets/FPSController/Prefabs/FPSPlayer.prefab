@@ -1349,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8205197696960000710
 Transform:
   m_ObjectHideFlags: 0
@@ -42753,7 +42753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1526964690268444965, guid: 7e0b61ecfeab5e345aece6809a0f6f98, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1526964690268444965, guid: 7e0b61ecfeab5e345aece6809a0f6f98, type: 3}
       propertyPath: m_StaticShadowCaster
@@ -42822,7 +42822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bea0cd624fd9e438ee7395319eee16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
   anim: {fileID: 6933875334354236433}
+  cam: {fileID: 9210579366826673607}
+  NetworkObjectMain: {fileID: 4771669613562961912}
+  Damage: 15
+  Delay: 1
+  Knockback: 1000
 --- !u!1001 &6641112464562588077
 PrefabInstance:
   m_ObjectHideFlags: 0

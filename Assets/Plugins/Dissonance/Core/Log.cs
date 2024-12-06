@@ -61,7 +61,7 @@ namespace Dissonance
                     case LogLevel.Trace:
                     case LogLevel.Debug:
                     case LogLevel.Info:
-                        UnityEngine.Debug.Log(_message);
+                        //UnityEngine.Debug.Log(_message);
                         break;
                     case LogLevel.Warn:
                         UnityEngine.Debug.LogWarning(_message);

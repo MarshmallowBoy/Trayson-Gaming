@@ -186,8 +186,8 @@ GameObject:
   - component: {fileID: 2016578590238442456}
   - component: {fileID: 5812948516729584837}
   - component: {fileID: -3427292814040158052}
-  - component: {fileID: -4603027638403522035}
   - component: {fileID: 8831106241158606565}
+  - component: {fileID: -4603027638403522035}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Bullet
@@ -293,6 +293,23 @@ MonoBehaviour:
   NonDestroyParticles:
   - {fileID: 7677227431130087358}
   - {fileID: 7676967824764898654}
+--- !u!114 &8831106241158606565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654863965844818017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931a32a535eb04e4fb32d19d328b355d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Explosion: {fileID: 1828176872806910, guid: c34359a96a1fde744b246eb5c613b0b9, type: 3}
+  ExplosionRadius: 15
+  force: 2
+  DirectionBias: {x: 0, y: 1, z: 0}
+  ExplosionDamage: 30
 --- !u!65 &-4603027638403522035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -314,23 +331,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0463915, y: 1, z: 2.3675692}
   m_Center: {x: 0.009810567, y: 0, z: -0.034189343}
---- !u!114 &8831106241158606565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2654863965844818017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931a32a535eb04e4fb32d19d328b355d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Explosion: {fileID: 1828176872806910, guid: c34359a96a1fde744b246eb5c613b0b9, type: 3}
-  ExplosionRadius: 15
-  force: 2
-  DirectionBias: {x: 0, y: 1, z: 0}
-  ExplosionDamage: 30
 --- !u!1 &3541513008507684328
 GameObject:
   m_ObjectHideFlags: 0

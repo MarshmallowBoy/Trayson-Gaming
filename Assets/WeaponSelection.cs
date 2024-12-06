@@ -29,8 +29,6 @@ public class WeaponSelection : MonoBehaviour
             weapon.SetActive(false);
         }
         Weapons[newValue].SetActive(true);
-        Debug.Log(oldValue);
-        Debug.Log(newValue);
     }
 
     void UpdateActiveWeapon()
