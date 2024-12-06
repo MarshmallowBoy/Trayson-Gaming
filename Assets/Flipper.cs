@@ -32,7 +32,7 @@ public class Flipper : NetworkBehaviour
                     Debug.Log("PlayerID: " + _hit.transform.GetComponent<NetworkObject>().OwnerClientId);
                     _hit.transform.GetComponent<Heath>().health -= Damage;
                     //_hit.transform.GetComponent<SC_FPSController>().ExternalVector = (transform.position - _hit.transform.position).normalized * Knockback;
-                    SendExternalVectorRpc(_hit.transform.GetComponent<NetworkObject>().OwnerClientId, (transform.position - _hit.transform.position).normalized * Knockback);
+                    SendExternalVectorRpc(_hit.transform.GetComponent<NetworkObject>().OwnerClientId, (_hit.transform.position - transform.position).normalized * Knockback);
                 }
             }
             Debug.Log(_hit.transform.name);
