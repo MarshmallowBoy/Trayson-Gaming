@@ -42226,6 +42226,7 @@ MonoBehaviour:
   Weapons: {fileID: 5848507818578544172}
   Preview: {fileID: 3305866303100974173}
   PreviewCamera: {fileID: 3512171649803714788}
+  MenuEnabled: 0
 --- !u!143 &9210579366318506676
 CharacterController:
   m_ObjectHideFlags: 0

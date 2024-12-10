@@ -44,6 +44,7 @@ public class SC_FPSController : NetworkBehaviour
     public GameObject Weapons;
     public GameObject Preview;
     public GameObject PreviewCamera;
+    public bool MenuEnabled = true;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -92,19 +93,23 @@ public class SC_FPSController : NetworkBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.H))
+            if (MenuEnabled)
             {
-                HatMenu.SetActive(!HatMenu.activeInHierarchy);
-                //AddHatSendRpc();
+                if (Input.GetKeyDown(KeyCode.H))
+                {
+                    HatMenu.SetActive(!HatMenu.activeInHierarchy);
+                    //AddHatSendRpc();
+                }
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    SuitMenu.SetActive(!SuitMenu.activeInHierarchy);
+                }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    TrailsMenu.SetActive(!TrailsMenu.activeInHierarchy);
+                }
             }
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                SuitMenu.SetActive(!SuitMenu.activeInHierarchy);
-            }
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                TrailsMenu.SetActive(!TrailsMenu.activeInHierarchy);
-            }
+
 
 
             if (Input.GetKeyDown(KeyCode.Tab))
