@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2348053109929956537, guid: 3dd8f29ff45c8b34cbceba32e3ffdc2c, type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2348053109929956537, guid: 3dd8f29ff45c8b34cbceba32e3ffdc2c, type: 3}
       propertyPath: m_MotionVectors

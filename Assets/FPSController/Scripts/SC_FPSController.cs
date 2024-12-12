@@ -45,6 +45,7 @@ public class SC_FPSController : NetworkBehaviour
     public GameObject Preview;
     public GameObject PreviewCamera;
     public bool MenuEnabled = true;
+    public GameObject Console;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -108,6 +109,15 @@ public class SC_FPSController : NetworkBehaviour
                 {
                     TrailsMenu.SetActive(!TrailsMenu.activeInHierarchy);
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.BackQuote))
+            {
+                Console.SetActive(!Console.activeInHierarchy);
+                MenuEnabled = !Console.activeInHierarchy;
+                HatMenu.SetActive(false);
+                SuitMenu.SetActive(false);
+                TrailsMenu.SetActive(false);
             }
 
 
