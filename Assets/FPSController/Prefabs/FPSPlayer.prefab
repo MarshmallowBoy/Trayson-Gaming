@@ -42226,7 +42226,7 @@ MonoBehaviour:
   Weapons: {fileID: 5848507818578544172}
   Preview: {fileID: 3305866303100974173}
   PreviewCamera: {fileID: 3512171649803714788}
-  MenuEnabled: 0
+  MenuEnabled: 1
 --- !u!143 &9210579366318506676
 CharacterController:
   m_ObjectHideFlags: 0
@@ -42538,7 +42538,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9210579366318506677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04733159ad1b5424d86596feb3caecb9, type: 3}
   m_Name: 
@@ -42686,6 +42686,7 @@ GameObject:
   - component: {fileID: 9210579366826673606}
   - component: {fileID: 7428401411492682237}
   - component: {fileID: 2983334987897249267}
+  - component: {fileID: 1051527066534729942}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -42824,6 +42825,23 @@ MultiplayerRolesData:
   m_ComponentsRolesMasks:
   - m_Object: {fileID: 9210579366826673605}
     m_RolesMask: 3
+--- !u!114 &1051527066534729942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366826673608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515d81a96fc685d478a14bc2b08c587d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xessQuality: 4
+  _antiGhosting: 0.1
+  sharpening: 1
+  sharpness: 0.5
+  m_mainCamera: {fileID: 0}
 --- !u!1001 &3545261141355263770
 PrefabInstance:
   m_ObjectHideFlags: 0

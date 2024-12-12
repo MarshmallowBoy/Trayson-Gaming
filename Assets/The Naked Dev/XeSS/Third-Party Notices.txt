@@ -1,0 +1,12 @@
+Assets\The Naked Dev\XeSS\Runtime\Plugins\X86_64\LICENSE.PDF
+https://github.com/intel/xess
+
+Intel(R) Xe Super Sampling (XeSS) enables an innovative framerate boosting technology supported by Intel(R) Arc(TM) graphics cards and other GPU vendors. 
+Using AI deep-learning to perform upscaling, XeSS offers higher framerates without degrading the image.
+
+
+Assets\The Naked Dev\XeSS\Runtime\Plugins\X86_64\LICENSE.TXT
+https://github.com/cdozdil/OptiScaler/blob/master/LICENSE
+
+OptiScaler implements all necessary API methods of DLSS2 & NVAPI to act as a man in the middle. 
+So from games perspective it's using DLSS2 but actually using OptiScaler and calls are interpreted/redirected to XeSS & FSR2 or DLSS with OptiScaler's tweaks and enchancements.

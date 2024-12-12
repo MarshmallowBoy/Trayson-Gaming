@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f86e579d8b795154db2df43841d9b4d6
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Runtime/Plugins/Resources/XeSS/Rcas_BIRP.shader
+  uploadId: 706310

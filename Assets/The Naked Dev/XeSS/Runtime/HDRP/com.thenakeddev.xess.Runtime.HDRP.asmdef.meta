@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0c0ea4a63e81dfa4cb10e7e67054fddc
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Runtime/HDRP/com.thenakeddev.xess.Runtime.HDRP.asmdef
+  uploadId: 706310

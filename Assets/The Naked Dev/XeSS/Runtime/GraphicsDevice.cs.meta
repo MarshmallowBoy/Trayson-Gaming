@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 088e5dcfb3535954a8e9fc4e388a653d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Runtime/GraphicsDevice.cs
+  uploadId: 706310

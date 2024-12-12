@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f5267f3ce8d56d4498ed2ba226633b7c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Runtime/URP/com.thenakeddev.xess.Runtime.URP.asmdef
+  uploadId: 706310

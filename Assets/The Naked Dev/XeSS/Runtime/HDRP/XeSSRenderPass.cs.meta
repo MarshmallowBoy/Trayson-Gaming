@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a24f91c9009dc0c458c2d35942efae36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Runtime/HDRP/XeSSRenderPass.cs
+  uploadId: 706310

@@ -1,0 +1,20 @@
+{
+    "name": "com.thenakeddev.xess.Runtime.URP",
+    "rootNamespace": "TND.XeSS",
+    "references": [
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "com.thenakeddev.xess.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_URP"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0cd065e04e711fc40867edd8234dfabb
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 286113
+  packageName: XeSS - Upscaling for Unity
+  packageVersion: 1.2.5
+  assetPath: Assets/The Naked Dev/XeSS/Editor/com.thenakeddev.xess.Editor.asmdef
+  uploadId: 706310
