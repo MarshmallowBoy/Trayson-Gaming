@@ -13,11 +13,6 @@ public class Console : MonoBehaviour
     public UnityEvent[] CommandOutputParameter;
     public ConsoleCommands ConsoleCommands;
 
-
-    private void OnEnable()
-    {
-        InputField.Select();
-    }
     public void HelpCommand()
     {
         foreach (string command in CommandStrings)
@@ -32,6 +27,10 @@ public class Console : MonoBehaviour
 
     public void PrintMessageToConsole(string Message)
     {
+        if (Message == "`")
+        {
+            return;
+        }
         InputField.text = string.Empty;
         Output.text += Message + "\n";
         Invoke("ResetScrollRect", 0.1f);
@@ -40,7 +39,7 @@ public class Console : MonoBehaviour
     void ResetScrollRect()
     {
         ScrollRect.verticalNormalizedPosition = 0;
-        InputField.Select();
+        InputField.ActivateInputField();
     }
 
     public int FindCommandIndexParameter(string Command)
@@ -57,6 +56,10 @@ public class Console : MonoBehaviour
 
     public void SendCommand(string Command)
     {
+        if(Command == "`")
+        {
+            return;
+        }
         if (Command.Contains(' '))
         {
             ConsoleCommands.CurrentParameter = Command.Split(' ')[1];

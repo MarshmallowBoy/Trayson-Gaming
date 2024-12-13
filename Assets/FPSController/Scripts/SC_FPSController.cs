@@ -114,10 +114,22 @@ public class SC_FPSController : NetworkBehaviour
             if (Input.GetKeyDown(KeyCode.BackQuote))
             {
                 Console.SetActive(!Console.activeInHierarchy);
+                Console.GetComponent<Console>().InputField.ActivateInputField();
                 MenuEnabled = !Console.activeInHierarchy;
                 HatMenu.SetActive(false);
                 SuitMenu.SetActive(false);
                 TrailsMenu.SetActive(false);
+                if (Console.activeInHierarchy)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                Cursor.visible = Console.activeInHierarchy;
+                canMove = !Cursor.visible;
+                Weapons.SetActive(!Cursor.visible);
             }
 
 
