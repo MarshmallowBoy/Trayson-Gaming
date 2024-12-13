@@ -43222,7 +43222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3776201566372586569, guid: 998090a9240da754c86f97220a48df8f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -430
       objectReference: {fileID: 0}
     - target: {fileID: 3776201566372586569, guid: 998090a9240da754c86f97220a48df8f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -43252,13 +43252,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Console
       objectReference: {fileID: 0}
-    - target: {fileID: 8294650023369159680, guid: 998090a9240da754c86f97220a48df8f, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 6407773997960146727, guid: 998090a9240da754c86f97220a48df8f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8294650023369159680, guid: 998090a9240da754c86f97220a48df8f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294650023369159680, guid: 998090a9240da754c86f97220a48df8f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8294650023369159680, guid: 998090a9240da754c86f97220a48df8f, type: 3}
       propertyPath: m_AnchorMin.x
