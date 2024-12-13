@@ -13,6 +13,11 @@ public class Console : MonoBehaviour
     public UnityEvent[] CommandOutputParameter;
     public ConsoleCommands ConsoleCommands;
 
+
+    private void OnEnable()
+    {
+        InputField.Select();
+    }
     public void HelpCommand()
     {
         foreach (string command in CommandStrings)
@@ -35,6 +40,7 @@ public class Console : MonoBehaviour
     void ResetScrollRect()
     {
         ScrollRect.verticalNormalizedPosition = 0;
+        InputField.Select();
     }
 
     public int FindCommandIndexParameter(string Command)

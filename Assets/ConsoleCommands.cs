@@ -1,6 +1,7 @@
 using TND.XeSS;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 public class ConsoleCommands : MonoBehaviour
 {
     public string CurrentParameter;
@@ -26,19 +27,11 @@ public class ConsoleCommands : MonoBehaviour
         terrainData.treePrototypes = treePrototypes;
 
         terrain.Flush();
-
-
-
-        /*
-            Terrain terrain = GameObject.Find("TerrainMain").GetComponent<Terrain>();
-            TerrainData terrainData = terrain.terrainData;
-            foreach (var proto in terrainData.treePrototypes)
-            {
-                proto.prefab = treetypes[int.Parse(CurrentParameter)];
-            }
-            terrain.Flush();
-        */
     }
 
+    public void map()
+    {
+        SceneManager.LoadScene(int.Parse(CurrentParameter));
+    }
 
 }

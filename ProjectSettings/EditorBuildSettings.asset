@@ -8,15 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 5f4aa694feb69d044840c2e81b66057f
-  - enabled: 0
-    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
-    guid: 4bea2fd750c900f4c87636ea34c7ea3b
   - enabled: 1
     path: Assets/Scenes/Map2.unity
     guid: 218c754ae94839348b4e49082c5b08a7
+  - enabled: 1
+    path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
+    guid: 4bea2fd750c900f4c87636ea34c7ea3b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
