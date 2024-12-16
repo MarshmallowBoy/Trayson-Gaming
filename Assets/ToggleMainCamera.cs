@@ -8,7 +8,7 @@ public class ToggleMainCamera : MonoBehaviour
     public GameObject Console;
     private void Start()
     {
-        NetworkManager.Singleton.OnServerStarted += OnServerStarted;
+        //NetworkManager.Singleton.OnServerStarted += OnServerStarted;
     }
     private void Update()
     {
@@ -22,6 +22,9 @@ public class ToggleMainCamera : MonoBehaviour
 
     private void OnServerStarted()
     {
-        gameObject.SetActive(false);
+        if (gameObject != null)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
