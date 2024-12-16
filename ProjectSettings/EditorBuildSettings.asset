@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 799fd2b16e530df40bbff3a9d77cad50
+  - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: 5f4aa694feb69d044840c2e81b66057f
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NGO_Minimal_Setup/NGO_Setup.unity
     guid: 4bea2fd750c900f4c87636ea34c7ea3b
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 799fd2b16e530df40bbff3a9d77cad50
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
