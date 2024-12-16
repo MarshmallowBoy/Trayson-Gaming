@@ -49,4 +49,10 @@ public class ConsoleCommands : MonoBehaviour
         NetworkManager.Singleton.gameObject.GetComponent<UnityTransport>().ConnectionData.Address = CurrentParameter;
         NetworkManager.Singleton.StartClient();
     }
+
+    public void disconnect()
+    {
+        NetworkManager.Singleton.Shutdown();
+        SceneManager.LoadScene(0);
+    }
 }

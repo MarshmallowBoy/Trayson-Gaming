@@ -1172,7 +1172,9 @@ MonoBehaviour:
   - -'bool' means 0 is disable/false and 1 is enable/true
   - XESS 'number' - Sets quality of XESS quality settings.
   - tree_shadow 'bool' - Determines whether tree shadows are enabled.
-  - map 'number' - loads map by index
+  - map 'number' - Loads map by index
+  - connect 'address' - Connects to server by address.
+  - disconnect - Disconnects user from server.
   CommandInputParameter:
   - Error_Debug
   - cmd
@@ -1182,6 +1184,8 @@ MonoBehaviour:
   - gaming
   - bruh
   - connect
+  - autism
+  - disconnect
   CommandOutputParameter:
   - m_PersistentCalls:
       m_Calls:
@@ -1294,6 +1298,40 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: connect
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1747880671360048581}
+        m_TargetAssemblyTypeName: Console, Assembly-CSharp
+        m_MethodName: PrintMessageToConsole
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' _____  ____  ____ ___  _ ____  ____  _     \n/__ __\/ 
+            __\/  _ \\  \// / ___\/  _ \/ \  /|\n  / \  |  \/|| / \| \  / |    \|
+            / \|| |\ ||\n  | |  |    /| |-|| / /  \___ || \_/|| | \||\n  \_/  \_/\_/\\_/
+            \|/_/   \____/\____/\_/  \|'
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4602412186748590830}
+        m_TargetAssemblyTypeName: ConsoleCommands, Assembly-CSharp
+        m_MethodName: disconnect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ' _____  ____  ____ ___  _ ____  ____  _     \n/__ __\/ 
+            __\/  _ \\  \// / ___\/  _ \/ \  /|\n  / \  |  \/|| / \| \  / |    \|
+            / \|| |\ ||\n  | |  |    /| |-|| / /  \___ || \_/|| | \||\n  \_/  \_/\_/\\_/
+            \|/_/   \____/\____/\_/  \|'
           m_BoolArgument: 0
         m_CallState: 2
   ConsoleCommands: {fileID: 4602412186748590830}
