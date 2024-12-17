@@ -42933,6 +42933,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4602412186748590830, guid: 998090a9240da754c86f97220a48df8f, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 9210579366318506677}
+    - target: {fileID: 4602412186748590830, guid: 998090a9240da754c86f97220a48df8f, type: 3}
       propertyPath: XeSS_URP
       value: 
       objectReference: {fileID: 1051527066534729942}

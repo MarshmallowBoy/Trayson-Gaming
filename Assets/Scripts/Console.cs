@@ -27,7 +27,7 @@ public class Console : MonoBehaviour
 
     public void PrintMessageToConsole(string Message)
     {
-        if (Message == "`")
+        if (Message == "`" || Message == string.Empty)
         {
             return;
         }
@@ -56,7 +56,7 @@ public class Console : MonoBehaviour
 
     public void SendCommand(string Command)
     {
-        if(Command == "`")
+        if(Command == "`" || Command == string.Empty)
         {
             return;
         }

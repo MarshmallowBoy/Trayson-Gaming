@@ -10,6 +10,7 @@ public class ConsoleCommands : MonoBehaviour
     public string CurrentParameter;
     public XeSS_URP XeSS_URP;
     public GameObject[] treetypes;
+    public GameObject Player;
     public void XESS()
     {
         XeSS_URP.SetQuality(int.Parse(CurrentParameter));
@@ -54,5 +55,13 @@ public class ConsoleCommands : MonoBehaviour
     {
         NetworkManager.Singleton.Shutdown();
         SceneManager.LoadScene(0);
+    }
+
+    public void kill()
+    {
+        if (Player != null)
+        {
+            Player.GetComponent<Heath>().health = 0;
+        }
     }
 }
