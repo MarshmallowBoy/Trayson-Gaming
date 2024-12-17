@@ -64,4 +64,11 @@ public class ConsoleCommands : MonoBehaviour
             Player.GetComponent<Heath>().health = 0;
         }
     }
+
+    public void gravity()
+    {
+        if (Player != null){
+            Player.GetComponent<SC_FPSController>().gravity = int.Parse(CurrentParameter);
+        }
+    }
 }
