@@ -1776,13 +1776,13 @@ MonoBehaviour:
       - m_Target: {fileID: 464007872}
         m_TargetAssemblyTypeName: MainMenuCommands, Assembly-CSharp
         m_MethodName: LoadMap
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: SlapMap
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1481830369
@@ -2216,13 +2216,13 @@ MonoBehaviour:
       - m_Target: {fileID: 464007872}
         m_TargetAssemblyTypeName: MainMenuCommands, Assembly-CSharp
         m_MethodName: LoadMap
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Train
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1523969364
@@ -2427,13 +2427,13 @@ MonoBehaviour:
       - m_Target: {fileID: 464007872}
         m_TargetAssemblyTypeName: MainMenuCommands, Assembly-CSharp
         m_MethodName: LoadMap
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Test
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1688638308

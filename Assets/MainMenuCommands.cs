@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using Unity.Netcode;
 public class MainMenuCommands : MonoBehaviour
 {
     public GameObject MapSelection;
     public void QuitAppleCashus()
     {
-        //EditorApplication.isPlaying = false;
         Application.Quit();
     }
 
@@ -15,8 +15,9 @@ public class MainMenuCommands : MonoBehaviour
         MapSelection.SetActive(!MapSelection.activeInHierarchy);
     }
 
-    public void LoadMap(int index)
+    public void LoadMap(string name)
     {
-        SceneManager.LoadScene(index);
+        NetworkManager.Singleton.StartHost();
+        NetworkManager.Singleton.SceneManager.LoadScene(name, LoadSceneMode.Single);
     }
 }
