@@ -1172,7 +1172,7 @@ MonoBehaviour:
   - -'bool' means 0 is disable/false and 1 is enable/true
   - XESS 'number' - Sets quality of XESS quality settings.
   - tree_shadow 'bool' - Determines whether tree shadows are enabled.
-  - map 'number' - Loads map by index
+  - map 'name' - Load map by name. (No spaces)
   - connect 'address' - Connects to server by address.
   - disconnect - Disconnects user from server.
   - kill - Kills your player.
