@@ -13,6 +13,14 @@ public class Console : MonoBehaviour
     public UnityEvent[] CommandOutputParameter;
     public ConsoleCommands ConsoleCommands;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            InputField.text = PlayerPrefs.GetString("previous_command");
+        }
+    }
+
     public void HelpCommand()
     {
         foreach (string command in CommandStrings)
@@ -64,6 +72,7 @@ public class Console : MonoBehaviour
         {
             ConsoleCommands.CurrentParameter = Command.Split(' ')[1];
         }
+        PlayerPrefs.SetString("previous_command", Command);
         CommandOutputParameter[FindCommandIndexParameter(Command.Split(' ')[0])].Invoke();
         ConsoleCommands.CurrentParameter = string.Empty;
     }
