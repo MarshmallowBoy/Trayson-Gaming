@@ -65,6 +65,6 @@ public class Console : MonoBehaviour
             ConsoleCommands.CurrentParameter = Command.Split(' ')[1];
         }
         CommandOutputParameter[FindCommandIndexParameter(Command.Split(' ')[0])].Invoke();
-        
+        ConsoleCommands.CurrentParameter = string.Empty;
     }
 }

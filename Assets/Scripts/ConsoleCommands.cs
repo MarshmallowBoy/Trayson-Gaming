@@ -47,6 +47,19 @@ public class ConsoleCommands : MonoBehaviour
 
     public void connect()
     {
+        if (CurrentParameter != string.Empty)
+        {
+            PlayerPrefs.SetString("last_ip_input", CurrentParameter);
+            Debug.Log("Bruhhuh");
+        }
+        else
+        {
+            if (PlayerPrefs.GetString("last_ip_input") == "")
+            {
+                PlayerPrefs.SetString("last_ip_input", "127.0.0.1");
+            }
+            CurrentParameter = PlayerPrefs.GetString("last_ip_input");
+        }
         NetworkManager.Singleton.gameObject.GetComponent<UnityTransport>().ConnectionData.Address = CurrentParameter;
         NetworkManager.Singleton.StartClient();
     }
@@ -70,5 +83,10 @@ public class ConsoleCommands : MonoBehaviour
         if (Player != null){
             Player.GetComponent<SC_FPSController>().gravity = int.Parse(CurrentParameter);
         }
+    }
+
+    public void resetprefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
