@@ -35,6 +35,13 @@ public class ConsoleCommands : MonoBehaviour
 
     public void map()
     {
+        NetworkManager.Singleton.StartHost();
+        NetworkManager.Singleton.SceneManager.LoadScene(CurrentParameter, LoadSceneMode.Single);
+    }
+
+    /*
+    public void map()
+    {
         mapRpc(CurrentParameter);
     }
 
@@ -43,14 +50,13 @@ public class ConsoleCommands : MonoBehaviour
     {
         NetworkManager.Singleton.Shutdown();
         SceneManager.LoadScene(int.Parse(param));
-    }
+    }*/
 
     public void connect()
     {
         if (CurrentParameter != string.Empty)
         {
             PlayerPrefs.SetString("last_ip_input", CurrentParameter);
-            Debug.Log("Bruhhuh");
         }
         else
         {
