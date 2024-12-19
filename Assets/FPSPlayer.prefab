@@ -957,7 +957,7 @@ Transform:
   - {fileID: 1121143658996923527}
   - {fileID: 3953327085046965221}
   - {fileID: 591795587375012962}
-  m_Father: {fileID: 9210579366318506674}
+  m_Father: {fileID: 3616434747142296588}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &8693653239950111090
 Animator:
@@ -4454,6 +4454,39 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &952084427081286073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3616434747142296588}
+  m_Layer: 6
+  m_Name: PenguinBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3616434747142296588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952084427081286073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4476939645121897163}
+  - {fileID: 9210579366455209360}
+  m_Father: {fileID: 9210579366318506674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &965764475794997419
 GameObject:
   m_ObjectHideFlags: 0
@@ -42718,8 +42751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4476939645121897163}
-  - {fileID: 9210579366455209360}
+  - {fileID: 3616434747142296588}
   - {fileID: 9210579366826673607}
   - {fileID: 6650930903363053295}
   - {fileID: 7263777245496864188}
@@ -42776,6 +42808,7 @@ MonoBehaviour:
   resistance: 0
   forceLimit: 0
   YourOnThinIcePal: 0
+  PenguinBody: {fileID: 952084427081286073}
   moveDirection: {x: 0, y: 0, z: 0}
   ExternalVector: {x: 0, y: 0, z: 0}
   moveLastDirection: {x: 0, y: 0, z: 0}
@@ -43304,7 +43337,7 @@ Transform:
   - {fileID: 8253369249556191074}
   - {fileID: 221090405436621158}
   - {fileID: 5949507180863451827}
-  m_Father: {fileID: 9210579366318506674}
+  m_Father: {fileID: 3616434747142296588}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9210579366455209358
 MeshFilter:

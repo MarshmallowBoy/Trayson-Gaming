@@ -21,6 +21,8 @@ public class SC_FPSController : NetworkBehaviour
     public float forceLimit;
     public bool YourOnThinIcePal;
 
+    public GameObject PenguinBody;
+
     CharacterController characterController;
     public Vector3 moveDirection = Vector3.zero;
     public Vector3 ExternalVector = Vector3.zero;
@@ -134,6 +136,8 @@ public class SC_FPSController : NetworkBehaviour
                     {
                         //ExternalVector += Vector3.forward * gravity * bellyspeed * -(1 - hit.normal.y);
                         ExternalVector += new Vector3(hit.normal.x, -(hit.normal.y), hit.normal.z);
+                        PenguinBody.transform.up = new Vector3(hit.normal.x, 0, hit.normal.z + 2f);
+                        PenguinBody.transform.localEulerAngles = new Vector3(PenguinBody.transform.localEulerAngles.x, 0, PenguinBody.transform.localEulerAngles.z);
                         Debug.Log(hit.normal);
                     }
                 }
