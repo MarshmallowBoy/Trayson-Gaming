@@ -46,6 +46,8 @@ public class SC_FPSController : NetworkBehaviour
     public GameObject PreviewCamera;
     public bool MenuEnabled = true;
     public GameObject Console;
+    public bool BellyMode;
+    public float bellyspeed;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -86,7 +88,16 @@ public class SC_FPSController : NetworkBehaviour
         {
             YourOnThinIcePal = false;
             RaycastHit _hit;
+            /*
             if (Physics.Raycast(transform.position, Vector3.down, out _hit, 0.1f))
+            {
+                if (_hit.transform.CompareTag("Ice"))
+                {
+                    YourOnThinIcePal = true;
+                }
+            }*/
+
+            if (Physics.Raycast(transform.position, Vector3.down, out _hit, 0.5f))
             {
                 if (_hit.transform.CompareTag("Ice"))
                 {
@@ -109,6 +120,14 @@ public class SC_FPSController : NetworkBehaviour
                 {
                     TrailsMenu.SetActive(!TrailsMenu.activeInHierarchy);
                 }
+            }
+
+            BellyMode = Input.GetKey(KeyCode.LeftControl);
+
+
+            if (BellyMode && YourOnThinIcePal)
+            {
+                ExternalVector += transform.forward * gravity * bellyspeed;
             }
 
             if (Input.GetKeyDown(KeyCode.BackQuote))
