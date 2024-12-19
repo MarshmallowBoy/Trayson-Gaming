@@ -125,9 +125,18 @@ public class SC_FPSController : NetworkBehaviour
             BellyMode = Input.GetKey(KeyCode.LeftControl);
 
 
-            if (BellyMode && YourOnThinIcePal)
+            if (BellyMode)
             {
-                ExternalVector += transform.forward * gravity * bellyspeed;
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
+                {
+                    if (_hit.transform.CompareTag("Ice"))
+                    {
+                        //ExternalVector += Vector3.forward * gravity * bellyspeed * -(1 - hit.normal.y);
+                        ExternalVector += new Vector3(hit.normal.x, -(hit.normal.y), hit.normal.z);
+                        Debug.Log(hit.normal);
+                    }
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.BackQuote))

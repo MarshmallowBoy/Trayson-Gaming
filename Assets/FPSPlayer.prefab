@@ -42909,6 +42909,8 @@ MonoBehaviour:
   PreviewCamera: {fileID: 3512171649803714788}
   MenuEnabled: 1
   Console: {fileID: 9195672351386147514}
+  BellyMode: 0
+  bellyspeed: 0.0005
 --- !u!143 &9210579366318506676
 CharacterController:
   m_ObjectHideFlags: 0
