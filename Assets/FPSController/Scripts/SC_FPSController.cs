@@ -141,6 +141,10 @@ public class SC_FPSController : NetworkBehaviour
                         Debug.Log(hit.normal);
                     }
                 }
+                else
+                {
+                    PenguinBody.transform.localEulerAngles = new Vector3(0, 0, 0);
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.BackQuote))
