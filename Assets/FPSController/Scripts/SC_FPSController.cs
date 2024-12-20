@@ -132,14 +132,11 @@ public class SC_FPSController : NetworkBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
                 {
-                    if (_hit.transform.CompareTag("Ice"))
-                    {
-                        //ExternalVector += Vector3.forward * gravity * bellyspeed * -(1 - hit.normal.y);
-                        ExternalVector += new Vector3(hit.normal.x, -(hit.normal.y), hit.normal.z);
-                        PenguinBody.transform.up = new Vector3(hit.normal.x, 0, hit.normal.z + 2f);
-                        PenguinBody.transform.localEulerAngles = new Vector3(PenguinBody.transform.localEulerAngles.x, 0, PenguinBody.transform.localEulerAngles.z);
-                        Debug.Log(hit.normal);
-                    }
+                    //ExternalVector += Vector3.forward * gravity * bellyspeed * -(1 - hit.normal.y);
+                    ExternalVector += new Vector3(hit.normal.x, -(hit.normal.y), hit.normal.z);
+                    PenguinBody.transform.up = new Vector3(hit.normal.x, 0, hit.normal.z + 2f);
+                    PenguinBody.transform.localEulerAngles = new Vector3(PenguinBody.transform.localEulerAngles.x, 0, PenguinBody.transform.localEulerAngles.z);
+                    Debug.Log(hit.normal);
                 }
                 
             }
@@ -210,8 +207,11 @@ public class SC_FPSController : NetworkBehaviour
                 ExternalVector = moveDirection;
             }
 
-            if (YourOnThinIcePal) { resistance = 0;}
-            else { resistance = 3;}
+            if (YourOnThinIcePal) { resistance = 0; }
+            else if (BellyMode) { resistance = 0.5f; }
+            else { resistance = 3; }
+
+
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
             {
