@@ -136,7 +136,6 @@ public class SC_FPSController : NetworkBehaviour
                     ExternalVector += new Vector3(hit.normal.x, -(hit.normal.y), hit.normal.z);
                     PenguinBody.transform.up = new Vector3(hit.normal.x, 0, hit.normal.z + 2f);
                     PenguinBody.transform.localEulerAngles = new Vector3(PenguinBody.transform.localEulerAngles.x, 0, 0);
-                    Debug.Log(hit.normal);
                 }
                 
             }
