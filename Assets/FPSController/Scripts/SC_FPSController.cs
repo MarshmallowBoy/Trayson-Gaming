@@ -50,6 +50,7 @@ public class SC_FPSController : NetworkBehaviour
     public GameObject Console;
     public bool BellyMode;
     public float bellyspeed;
+    public GameObject NameTag;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -61,6 +62,7 @@ public class SC_FPSController : NetworkBehaviour
         HealthCamera.SetActive(IsOwner);
         DamageVignette.SetActive(IsOwner);
         PreviewCamera.SetActive(IsOwner);
+        NameTag.SetActive(!IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;
