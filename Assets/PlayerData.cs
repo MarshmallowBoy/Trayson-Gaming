@@ -14,6 +14,7 @@ public class PlayerData : NetworkBehaviour
         {
             Name = SteamFriends.GetPersonaName();
             SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().NetworkObjectId);
+            Debug.Log(GetComponent<NetworkObject>().NetworkObjectId);
         }
     }
 
