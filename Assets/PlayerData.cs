@@ -11,6 +11,15 @@ public class PlayerData : NetworkBehaviour
     void Start()
     {
         NetworkManager.Singleton.OnClientConnectedCallback += InitializeCameraSelection;
+        if (SteamManager.Initialized)
+        {
+            if (IsOwner)
+            {
+                Name = SteamFriends.GetPersonaName();
+                SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
+                Debug.Log(GetComponent<NetworkObject>().OwnerClientId);
+            }
+        }
     }
 
     public void InitializeCameraSelection(ulong PlayerID)
