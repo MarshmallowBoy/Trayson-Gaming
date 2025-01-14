@@ -62,7 +62,7 @@ public class SC_FPSController : NetworkBehaviour
         HealthCamera.SetActive(IsOwner);
         DamageVignette.SetActive(IsOwner);
         PreviewCamera.SetActive(IsOwner);
-        NameTag.SetActive(!IsOwner);
+        //NameTag.SetActive(!IsOwner);
         foreach(var O in Outline)
         {
             O.enabled = true;

@@ -26,6 +26,6 @@ public class PlayerData : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void RecieveStringAcrossNetworkRPC(string str)
     {
-        text1.text = str; 
+        text1.text = str;
     }
 }
