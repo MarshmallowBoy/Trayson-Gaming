@@ -12,9 +12,12 @@ public class PlayerData : NetworkBehaviour
     {
         if (SteamManager.Initialized)
         {
-            Name = SteamFriends.GetPersonaName();
-            SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
-            Debug.Log(GetComponent<NetworkObject>().OwnerClientId);
+            if (IsOwner)
+            {
+                Name = SteamFriends.GetPersonaName();
+                SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
+                Debug.Log(GetComponent<NetworkObject>().OwnerClientId);
+            }
         }
     }
 
