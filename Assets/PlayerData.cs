@@ -3,11 +3,12 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Networking;
+
 public class PlayerData : NetworkBehaviour
 {
     public string Name = "%Username%";
     public TextMeshPro text1;
-    void Start()
+    void Update()
     {
         if (SteamManager.Initialized)
         {
