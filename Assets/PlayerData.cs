@@ -8,12 +8,7 @@ public class PlayerData : NetworkBehaviour
 {
     public string Name = "%Username%";
     public TextMeshPro text1;
-    void Start()
-    {
-        NetworkManager.Singleton.OnClientConnectedCallback += InitializeCameraSelection;
-    }
-
-    public void InitializeCameraSelection(ulong PlayerID)
+    void Update()
     {
         if (SteamManager.Initialized)
         {
