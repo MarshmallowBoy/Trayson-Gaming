@@ -26,6 +26,7 @@ public class PlayerData : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void RecieveStringAcrossNetworkRPC(string str, ulong PlayerID)
     {
+        NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().Name = str;
         NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().text1.text = str;
     }
 }
