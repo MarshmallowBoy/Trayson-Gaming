@@ -8,7 +8,7 @@ public class PlayerData : NetworkBehaviour
 {
     public string Name = "%Username%";
     public TextMeshPro text1;
-    void Update()
+    void Start()
     {
         if (SteamManager.Initialized)
         {
@@ -26,7 +26,6 @@ public class PlayerData : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void RecieveStringAcrossNetworkRPC(string str)
     {
-        Name = str;
         text1.text = str; 
     }
 }
