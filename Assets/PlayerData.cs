@@ -13,7 +13,7 @@ public class PlayerData : NetworkBehaviour
         if (SteamManager.Initialized)
         {
             Name = SteamFriends.GetPersonaName();
-            SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
+            SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().NetworkObjectId);
         }
     }
 
@@ -26,7 +26,8 @@ public class PlayerData : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void RecieveStringAcrossNetworkRPC(string str, ulong PlayerID)
     {
-        NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().Name = str;
+       // NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().Name = str;
         NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().text1.text = str;
+       //TextObject.GetComponent<TextMeshPro>().text = str;
     }
 }
