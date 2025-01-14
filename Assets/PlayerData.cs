@@ -8,7 +8,12 @@ public class PlayerData : NetworkBehaviour
 {
     public string Name = "%Username%";
     public TextMeshPro text1;
-    void Update()
+    void Start()
+    {
+        NetworkManager.Singleton.OnClientConnectedCallback += InitializeCameraSelection;
+    }
+
+    public void InitializeCameraSelection(ulong PlayerID)
     {
         if (SteamManager.Initialized)
         {
@@ -30,8 +35,7 @@ public class PlayerData : NetworkBehaviour
     [Rpc(SendTo.ClientsAndHost)]
     public void RecieveStringAcrossNetworkRPC(string str, ulong PlayerID)
     {
-       // NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().Name = str;
-        NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().text1.text = str;
-       //TextObject.GetComponent<TextMeshPro>().text = str;
+       NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().Name = str;
+       NetworkManager.Singleton.ConnectedClients[PlayerID].PlayerObject.GetComponent<PlayerData>().text1.text = str;
     }
 }
