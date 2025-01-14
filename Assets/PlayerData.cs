@@ -17,7 +17,6 @@ public class PlayerData : NetworkBehaviour
             {
                 Name = SteamFriends.GetPersonaName();
                 SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
-                Debug.Log(GetComponent<NetworkObject>().OwnerClientId);
             }
         }
     }
@@ -30,7 +29,6 @@ public class PlayerData : NetworkBehaviour
             {
                 Name = SteamFriends.GetPersonaName();
                 SetStringAcrossNetworkRPC(Name, GetComponent<NetworkObject>().OwnerClientId);
-                Debug.Log(GetComponent<NetworkObject>().OwnerClientId);
             }
         }
     }
