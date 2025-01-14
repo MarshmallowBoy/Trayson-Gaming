@@ -361,7 +361,8 @@ MonoBehaviour:
   Collision: 0
   ID: 0
   Damaged: 0
-  DestroyOnTouch: 0
+  DestroyOnTouch: 1
+  NonDestroyParticles: []
 --- !u!114 &7475082151837825959
 MonoBehaviour:
   m_ObjectHideFlags: 0
