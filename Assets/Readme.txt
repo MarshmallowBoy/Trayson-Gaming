@@ -1,2 +1,2 @@
 Gaming.
-Trayson, your autistic get back to work.
+Trayson, You Are Autistic. Get back to what you were doing.
