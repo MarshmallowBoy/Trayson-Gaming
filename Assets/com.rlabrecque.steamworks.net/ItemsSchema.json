@@ -1,0 +1,19 @@
+{
+	"appid": 3464140,
+	"items": [
+	{
+		"itemdefid": 1,
+		"type":  "item",
+		"name": "Fancy Fedora",
+		"description": "More of a traditional look in comparison to your fellow Gen Two penguins",
+		"price": "1;USD99",
+		"name_color":  "7D6D00",
+		"background_color":  "3C352E",
+		"item_slot": "decoration",
+		"icon_url": "https://i.imgur.com/FgpVlcU.png",
+		"icon_url_large": "https://i.imgur.com/FgpVlcU.png",
+		"tradable": true,
+		"marketable": true
+	}
+	]
+}

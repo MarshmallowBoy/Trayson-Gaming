@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Slopes.unity
     guid: bba63c58882b6ae41bfc9b9c65421a5f
+  - enabled: 1
+    path: Assets/Scenes/Lighting.unity
+    guid: f97ba5d7acd84a64f8d9f743251a82e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
