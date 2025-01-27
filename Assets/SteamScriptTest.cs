@@ -10,6 +10,7 @@ public class SteamScriptTest : MonoBehaviour
     {
         if (SteamManager.Initialized)
         {
+            SteamUserStats.RequestCurrentStats();
             m_GameOverlayActivated = Callback<GameOverlayActivated_t>.Create(OnGameOverlayActivated);
             m_UserStatsReceived = Callback<UserStatsReceived_t>.Create(GiveStartAchievement);
         }

@@ -126,7 +126,7 @@ public class SC_FPSController : NetworkBehaviour
                 }
             }
 
-            BellyMode = Input.GetKey(KeyCode.LeftControl);
+            BellyMode = Input.GetAxis("Slide") > 0;
 
 
             if (BellyMode)
