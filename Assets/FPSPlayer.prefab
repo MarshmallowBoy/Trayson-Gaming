@@ -43721,6 +43721,7 @@ GameObject:
   - component: {fileID: 2983334987897249267}
   - component: {fileID: 1051527066534729942}
   - component: {fileID: 324914125153512154}
+  - component: {fileID: 4545484379540726482}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -43890,6 +43891,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Offset: {x: 0, y: 0, z: 0}
   defaultY: 0
+--- !u!114 &4545484379540726482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210579366826673608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9483b03804b318f48b912eac5f179699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DLSSQuality: 4
+  m_antiGhosting: 0.1
+  sharpening: 1
+  sharpness: 0.5
+  m_mainCamera: {fileID: 0}
 --- !u!1001 &2842171347426522525
 PrefabInstance:
   m_ObjectHideFlags: 0
