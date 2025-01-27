@@ -99,6 +99,39 @@ namespace TND.XeSS
             return result >= 0;
         }
 
+        public void SetQuality(int Index)
+        {
+            XeSS_Quality quality = XeSS_Quality.Off;
+            switch (Index)
+            {
+                case 0:
+                    quality = XeSS_Quality.Off;
+                    break;
+                case 1:
+                    quality = XeSS_Quality.NativeAA;
+                    break;
+                case 2:
+                    quality = XeSS_Quality.UltraQuality;
+                    break;
+                case 3:
+                    quality = XeSS_Quality.Quality;
+                    break;
+                case 4:
+                    quality = XeSS_Quality.Balanced;
+                    break;
+                case 5:
+                    quality = XeSS_Quality.Performance;
+                    break;
+                case 6:
+                    quality = XeSS_Quality.UltraPerformance;
+                    break;
+            }
+            _xessQuality = _previousXessQuality = quality;
+            (_scaleFactor, IntelQuality) = GetScalingFromQualityMode(quality);
+
+            OnQualityChanged();
+        }
+
         public void OnSetQuality(XeSS_Quality quality)
         {
             _xessQuality = _previousXessQuality = quality;
@@ -106,6 +139,7 @@ namespace TND.XeSS
 
             OnQualityChanged();
         }
+
 
         public void OnSetQuality(IntelQuality quality)
         {

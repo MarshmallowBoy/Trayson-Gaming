@@ -8,12 +8,12 @@ using Unity.Netcode.Transports.UTP;
 public class ConsoleCommands : MonoBehaviour
 {
     public string CurrentParameter;
-    //public XeSS_URP XeSS_URP;
+    public XeSS_URP XeSS_URP;
     public GameObject[] treetypes;
     public GameObject Player;
     public void XESS()
     {
-        //XeSS_URP.SetQuality(int.Parse(CurrentParameter));
+        XeSS_URP.SetQuality(int.Parse(CurrentParameter));
     }
 
     public void tree_shadows()
