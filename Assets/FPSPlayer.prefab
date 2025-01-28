@@ -43908,6 +43908,15 @@ MonoBehaviour:
   sharpening: 1
   sharpness: 0.5
   m_mainCamera: {fileID: 0}
+  m_renderWidth: 0
+  m_renderHeight: 0
+  m_displayWidth: 0
+  m_displayHeight: 0
+  m_depthBuffer: {fileID: 0}
+  m_motionVectorBuffer: {fileID: 0}
+  CameraGraphicsOutput: 74
+  m_cameraStacking: 0
+  m_topCamera: {fileID: 0}
 --- !u!1001 &2842171347426522525
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using Unity.Netcode;
 using System.Net;
 using Unity.Netcode.Transports.UTP;
+using UnityEditor;
+using System.IO;
+
 public class ConsoleCommands : MonoBehaviour
 {
     public string CurrentParameter;
@@ -94,5 +97,13 @@ public class ConsoleCommands : MonoBehaviour
     public void resetprefs()
     {
         PlayerPrefs.DeleteAll();
+    }
+
+    public void maps()
+    {
+        foreach (EditorBuildSettingsScene Scene in EditorBuildSettings.scenes)
+        {
+            GetComponent<Console>().PrintMessageToConsole(Path.GetFileNameWithoutExtension(Scene.path));
+        }
     }
 }
