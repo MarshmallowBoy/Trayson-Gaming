@@ -101,9 +101,14 @@ public class ConsoleCommands : MonoBehaviour
 
     public void maps()
     {
+        #if UNITY_EDITOR
         foreach (EditorBuildSettingsScene Scene in EditorBuildSettings.scenes)
         {
             GetComponent<Console>().PrintMessageToConsole(Path.GetFileNameWithoutExtension(Scene.path));
         }
+        #else
+            GetComponent<Console>().PrintMessageToConsole("Command only works in editor (Yes I know its dumb)");
+        #endif
+
     }
 }
