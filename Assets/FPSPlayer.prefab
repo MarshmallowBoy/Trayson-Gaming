@@ -21254,6 +21254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5293465698115474238}
   - component: {fileID: 4571827183796070429}
+  - component: {fileID: 6136683124302340542}
   m_Layer: 6
   m_Name: MachineGun
   m_TagString: Untagged
@@ -21295,6 +21296,19 @@ MonoBehaviour:
   ID: 0
   networkObject: {fileID: 4771669613562961912}
   Delay: 0.05
+--- !u!114 &6136683124302340542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971329584020965339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f920763c12666342ab86dab5c58d715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enable: 0
 --- !u!1 &5007393633494554060
 GameObject:
   m_ObjectHideFlags: 0
