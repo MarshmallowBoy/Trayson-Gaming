@@ -7,6 +7,8 @@ public class Tank : MonoBehaviour
     public float speed;
     public float angularAcceleration;
     public float angularSpeed;
+    public BlendShapesController BSC;
+    public float TreadAnimSpeed = 1;
     void Update()
     {
         if (body.linearVelocity.magnitude < speed && Input.GetAxis("Horizontal") == 0)
@@ -17,5 +19,16 @@ public class Tank : MonoBehaviour
         {
             body.angularVelocity += new Vector3(0, Input.GetAxis("Horizontal") * angularAcceleration, 0);
         }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        //Right is one, left is negative one
+        BSC.rightProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
+        BSC.leftProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
+
+        BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+        BSC.leftProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
     }
 }
