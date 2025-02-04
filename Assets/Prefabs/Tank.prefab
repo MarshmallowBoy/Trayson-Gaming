@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 5051754956806943154}
-  acceleration: 1
+  acceleration: 0.5
   speed: 5
   angularAcceleration: 0.1
   angularSpeed: 0.5

@@ -9,6 +9,12 @@ public class Tank : MonoBehaviour
     public float angularSpeed;
     public BlendShapesController BSC;
     public float TreadAnimSpeed = 1;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void Update()
     {
         if (body.linearVelocity.magnitude < speed && Input.GetAxis("Horizontal") == 0)
@@ -28,7 +34,11 @@ public class Tank : MonoBehaviour
         BSC.rightProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
         BSC.leftProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
 
-        BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
-        BSC.leftProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+        if (Input.GetAxis("Horizontal") == 0)
+        {
+            BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+            BSC.leftProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+        }
+        
     }
 }
