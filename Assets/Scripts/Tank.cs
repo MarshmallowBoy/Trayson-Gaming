@@ -31,8 +31,8 @@ public class Tank : MonoBehaviour
     private void FixedUpdate()
     {
         //Right is one, left is negative one
-        BSC.rightProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
-        BSC.leftProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
+        BSC.rightProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
+        BSC.leftProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
 
         if (Input.GetAxis("Horizontal") == 0)
         {
