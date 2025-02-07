@@ -128,10 +128,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 645924733638071068, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 645924733638071068, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4616013
       objectReference: {fileID: 0}
@@ -170,10 +166,6 @@ PrefabInstance:
     - target: {fileID: 645924733638071068, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 645924733638071068, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953976164874487799, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
       propertyPath: m_Name

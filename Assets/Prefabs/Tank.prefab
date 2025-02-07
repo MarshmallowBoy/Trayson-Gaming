@@ -21046,10 +21046,19 @@ MonoBehaviour:
   angularAcceleration: 0.1
   angularSpeed: 0.5
   turretSpeed: 0.075
+  wheelSpeed: 5
   BSC: {fileID: 837535398650142238}
   TreadAnimSpeed: 25
   MuzzleFlash: {fileID: 2724093434039849526}
   Delay: 0.1
+  LeftWheels:
+  - {fileID: 9187051055006048695}
+  - {fileID: 7930630222754189463}
+  - {fileID: 6193906821301605531}
+  RightWheels:
+  - {fileID: 4091977191147039328}
+  - {fileID: 406922276443440039}
+  - {fileID: 8452970256092011525}
 --- !u!54 &5051754956806943154
 Rigidbody:
   m_ObjectHideFlags: 0

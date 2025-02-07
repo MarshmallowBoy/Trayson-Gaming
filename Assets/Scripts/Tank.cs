@@ -12,12 +12,14 @@ public class Tank : MonoBehaviour
     public float angularAcceleration;
     public float angularSpeed;
     public float turretSpeed;
+    public float wheelSpeed;
     public BlendShapesController BSC;
     public float TreadAnimSpeed = 1;
     public ParticleSystem MuzzleFlash;
     public float Delay;
     float nextTimeToFire;
-
+    public Transform[] LeftWheels;
+    public Transform[] RightWheels;
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -63,12 +65,31 @@ public class Tank : MonoBehaviour
         BSC.rightProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
         BSC.leftProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
 
+        foreach (Transform g in RightWheels)
+        {
+            g.Rotate(0, 0, Input.GetAxis("Horizontal") * wheelSpeed);
+        }
+        foreach (Transform g in LeftWheels)
+        {
+            g.Rotate(0, 0, -Input.GetAxis("Horizontal") * wheelSpeed);
+        }
+
         if (Input.GetAxis("Horizontal") == 0)
         {
             BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
             BSC.leftProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+
+            foreach (Transform g in RightWheels)
+            {
+                g.Rotate(0, 0, -Input.GetAxis("Vertical") * wheelSpeed);
+            }
+            foreach (Transform g in LeftWheels)
+            {
+                g.Rotate(0, 0, -Input.GetAxis("Vertical") * wheelSpeed);
+            }
         }
 
+        
 
         
         TurretBody.Rotate(0, TurretBody.InverseTransformPoint(Target).x * turretSpeed, 0);
