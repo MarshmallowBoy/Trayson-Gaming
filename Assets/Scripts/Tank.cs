@@ -27,16 +27,20 @@ public class Tank : MonoBehaviour
 
     void Update()
     {
+        //Movement Forward
         if (body.linearVelocity.magnitude < speed && Input.GetAxis("Horizontal") == 0)
         {
             body.linearVelocity += body.transform.forward * acceleration * Input.GetAxis("Vertical");
         }
+        //Turning
         if (body.angularVelocity.magnitude < angularSpeed)
         {
             body.angularVelocity += new Vector3(0, Input.GetAxis("Horizontal") * angularAcceleration, 0);
         }
 
+        //Defining Target Based On Mouseposition
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
         RaycastHit _mouseRay;
         if (Physics.Raycast(ray, out _mouseRay, Mathf.Infinity))
         {
@@ -46,6 +50,7 @@ public class Tank : MonoBehaviour
             }
         }
 
+        //Firing Mechanics
         if (Input.GetButton("Fire1") && nextTimeToFire < Time.time)
         {
             nextTimeToFire = Time.time + Delay;
@@ -55,16 +60,22 @@ public class Tank : MonoBehaviour
                 MuzzleFlash.Play();
             }
         }
-
         Debug.DrawRay(TurretGun.position, -TurretGun.forward * 1000, Color.red);
     }
 
     private void FixedUpdate()
     {
+        TreadMovement();
+        TurretMovement();
+    }
+
+    void TreadMovement()
+    {
         //Right is one, left is negative one
         BSC.rightProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
         BSC.leftProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
 
+        //Move Wheels Forward Or Backward
         foreach (Transform g in RightWheels)
         {
             g.Rotate(0, 0, Input.GetAxis("Horizontal") * wheelSpeed);
@@ -74,6 +85,7 @@ public class Tank : MonoBehaviour
             g.Rotate(0, 0, -Input.GetAxis("Horizontal") * wheelSpeed);
         }
 
+        //Move Wheels Side
         if (Input.GetAxis("Horizontal") == 0)
         {
             BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
@@ -88,12 +100,30 @@ public class Tank : MonoBehaviour
                 g.Rotate(0, 0, -Input.GetAxis("Vertical") * wheelSpeed);
             }
         }
+    }
 
-        
-
-        
+    void TurretMovement()
+    {
+        //TurretBody Movement
         TurretBody.Rotate(0, TurretBody.InverseTransformPoint(Target).x * turretSpeed, 0);
+
+        //Turret Gun Converting 360 to 180 -180
+        Vector3 angles = TurretGun.eulerAngles;
+        angles.x = (angles.x > 180) ? angles.x - 360 : angles.x;
+
+        //Clamping Turret Gun movement
+        if (angles.x < -40)
+        {
+            TurretGun.Rotate(0.1f, 0, 0);
+            return;
+        }
+        if (angles.x > 40)
+        {
+            TurretGun.Rotate(-0.1f, 0, 0);
+            return;
+        }
+
+        //Moving Turret Gun
         TurretGun.Rotate(TurretGun.InverseTransformPoint(Target).y, 0, 0);
-        Debug.Log(TurretGun.InverseTransformPoint(Target).y);
     }
 }
