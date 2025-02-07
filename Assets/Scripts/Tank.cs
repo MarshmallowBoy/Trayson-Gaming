@@ -5,6 +5,7 @@ public class Tank : MonoBehaviour
     public Rigidbody body;
     public Transform TurretBody;
     public Transform TurretGun;
+    public Vector2 ClampThresholdTurretGun;
     Vector3 Target;
     public float acceleration;
     public float speed;
@@ -71,6 +72,7 @@ public class Tank : MonoBehaviour
 
         
         TurretBody.Rotate(0, TurretBody.InverseTransformPoint(Target).x * turretSpeed, 0);
-        TurretGun.Rotate(TurretGun.InverseTransformPoint(Target).y * turretSpeed, 0, 0);
+        TurretGun.Rotate(TurretGun.InverseTransformPoint(Target).y, 0, 0);
+        Debug.Log(TurretGun.InverseTransformPoint(Target).y);
     }
 }
