@@ -20,12 +20,14 @@ public class Tank : NetworkBehaviour
     float nextTimeToFire;
     public Transform[] LeftWheels;
     public Transform[] RightWheels;
+    public Camera TankCamera;
     private void Start()
     {
         if (IsOwner)
         {
             Cursor.lockState = CursorLockMode.Confined;
         }
+        TankCamera.gameObject.SetActive(IsOwner);
     }
 
     void Update()
