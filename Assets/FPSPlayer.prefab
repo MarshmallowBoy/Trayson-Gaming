@@ -46342,7 +46342,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 2488413909229927617, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 6163146196848978523, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 8071668408606529743, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 1460811798515899576, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 6092597719379159707, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 1553995398795144339, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+    - {fileID: 1420068416513123599, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
