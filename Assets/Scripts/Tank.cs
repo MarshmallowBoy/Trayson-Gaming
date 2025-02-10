@@ -1,6 +1,6 @@
 using UnityEngine;
-
-public class Tank : MonoBehaviour
+using Unity.Netcode;
+public class Tank : NetworkBehaviour
 {
     public Rigidbody body;
     public Transform TurretBody;
@@ -22,11 +22,19 @@ public class Tank : MonoBehaviour
     public Transform[] RightWheels;
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Confined;
+        if (IsOwner)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
     }
 
     void Update()
     {
+        if (!IsOwner)
+        {
+            return;
+        }
+
         //Movement Forward
         if (body.linearVelocity.magnitude < speed && Input.GetAxis("Horizontal") == 0)
         {
@@ -65,8 +73,11 @@ public class Tank : MonoBehaviour
 
     private void FixedUpdate()
     {
-        TreadMovement();
-        TurretMovement();
+        if (IsOwner)
+        {
+            TreadMovement();
+            TurretMovement();
+        }
     }
 
     void TreadMovement()
