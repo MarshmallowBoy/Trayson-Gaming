@@ -46306,6 +46306,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncScaleX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncScaleY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncScaleZ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncPositionX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncPositionY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncPositionZ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncRotAngleX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180347209264979636, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
+      propertyPath: SyncRotAngleZ
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6953976164874487799, guid: 68cc3312e29f94f469763b811d8416c6, type: 3}
       propertyPath: m_Name
       value: Tank
