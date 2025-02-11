@@ -21241,6 +21241,7 @@ MonoBehaviour:
   TreadAnimSpeed: 25
   MuzzleFlash: {fileID: 2724093434039849526}
   Delay: 0.1
+  Damage: 0
   LeftWheels:
   - {fileID: 9187051055006048695}
   - {fileID: 7930630222754189463}
@@ -26975,15 +26976,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582645036330254609, guid: 6cf1c524cf40ca746a4bde91b5e9436e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.842171e-14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8582645036330254609, guid: 6cf1c524cf40ca746a4bde91b5e9436e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.8999996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8582645036330254609, guid: 6cf1c524cf40ca746a4bde91b5e9436e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0000002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8582645036330254609, guid: 6cf1c524cf40ca746a4bde91b5e9436e, type: 3}
       propertyPath: m_LocalRotation.w

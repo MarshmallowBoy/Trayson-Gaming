@@ -111,4 +111,9 @@ public class ConsoleCommands : MonoBehaviour
         #endif
 
     }
+
+    public void Vehicle()
+    {
+        PlayerPrefs.SetString("ActiveVehicle", CurrentParameter);
+    }
 }

@@ -17,6 +17,7 @@ public class Tank : NetworkBehaviour
     public float TreadAnimSpeed = 1;
     public ParticleSystem MuzzleFlash;
     public float Delay;
+    public int Damage;
     float nextTimeToFire;
     public Transform[] LeftWheels;
     public Transform[] RightWheels;
@@ -68,6 +69,10 @@ public class Tank : NetworkBehaviour
             if (Physics.Raycast(TurretGun.position, -TurretGun.forward, out hit))
             {
                 MuzzleFlash.Play();
+                if (hit.transform.CompareTag("Player"))
+                {
+                    hit.transform.GetComponent<Heath>().DoDamage(Damage);
+                }
             }
         }
         Debug.DrawRay(TurretGun.position, -TurretGun.forward * 1000, Color.red);
