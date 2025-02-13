@@ -54,9 +54,12 @@ public class SC_FPSController : NetworkBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        // Lock cursor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (IsOwner)
+        {
+            // Lock cursor
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
         playerCamera.gameObject.SetActive(IsOwner);
         HealthBar.SetActive(IsOwner);
         HealthCamera.SetActive(IsOwner);

@@ -68,7 +68,7 @@ public class Tank : NetworkBehaviour
             RaycastHit hit;
             if (Physics.Raycast(TurretGun.position, -TurretGun.forward, out hit))
             {
-                MuzzleFlash.Play();
+                FireEffectsServerRpc();
                 if (hit.transform.CompareTag("Player"))
                 {
                     hit.transform.GetComponent<Heath>().DoDamage(Damage);
@@ -76,6 +76,18 @@ public class Tank : NetworkBehaviour
             }
         }
         Debug.DrawRay(TurretGun.position, -TurretGun.forward * 1000, Color.red);
+    }
+
+    [Rpc(SendTo.Server)]
+    public void FireEffectsServerRpc()
+    {
+        FireEffectsClientRpc();
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    public void FireEffectsClientRpc()
+    {
+        MuzzleFlash.Play();
     }
 
     private void FixedUpdate()

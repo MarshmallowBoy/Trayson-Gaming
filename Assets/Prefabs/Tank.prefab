@@ -21241,7 +21241,7 @@ MonoBehaviour:
   TreadAnimSpeed: 25
   MuzzleFlash: {fileID: 2724093434039849526}
   Delay: 0.1
-  Damage: 0
+  Damage: 10
   LeftWheels:
   - {fileID: 9187051055006048695}
   - {fileID: 7930630222754189463}

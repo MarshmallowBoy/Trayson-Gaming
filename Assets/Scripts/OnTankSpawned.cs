@@ -4,9 +4,14 @@ public class OnTankSpawned : NetworkBehaviour
 {
     private void Start()
     {
-        if (PlayerPrefs.GetString("ActiveVehicle") == "None")
+        if (!IsOwner)
         {
+            enabled = false;
             return;
+        }
+        if (PlayerPrefs.GetString("ActiveVehicle") == string.Empty)
+        {
+            PlayerPrefs.SetString("ActiveVehicle", "none");
         }
         switch (PlayerPrefs.GetString("ActiveVehicle"))
         {
@@ -22,6 +27,5 @@ public class OnTankSpawned : NetworkBehaviour
                 transform.position = Vector3.down * 5;
                 break;
         }
-        
     }
 }
