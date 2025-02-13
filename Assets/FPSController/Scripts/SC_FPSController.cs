@@ -86,9 +86,6 @@ public class SC_FPSController : NetworkBehaviour
         transform.position = position;
         characterController.enabled = true;
     }
-
-
-
     void Update()
     {
         if (IsOwner)
@@ -131,7 +128,6 @@ public class SC_FPSController : NetworkBehaviour
 
             BellyMode = Input.GetAxis("Slide") > 0;
 
-
             if (BellyMode)
             {
                 RaycastHit hit;
@@ -170,8 +166,6 @@ public class SC_FPSController : NetworkBehaviour
                 Weapons.SetActive(!Cursor.visible);
             }
 
-
-
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 Cursor.visible = !Cursor.visible;
@@ -187,7 +181,6 @@ public class SC_FPSController : NetworkBehaviour
                 Weapons.SetActive(!Cursor.visible);
                 Preview.SetActive(Cursor.visible);
             }
-
 
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -214,8 +207,6 @@ public class SC_FPSController : NetworkBehaviour
             if (YourOnThinIcePal) { resistance = 0; }
             else if (BellyMode) { resistance = 0.5f; }
             else { resistance = 3; }
-
-
 
             if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
             {
