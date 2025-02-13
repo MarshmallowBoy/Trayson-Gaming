@@ -138,19 +138,21 @@ public class Tank : NetworkBehaviour
         TurretBody.Rotate(0, TurretBody.InverseTransformPoint(Target).x * turretSpeed, 0);
 
         //Turret Gun Converting 360 to 180 -180
-        Vector3 angles = TurretGun.eulerAngles;
+        Vector3 angles = TurretGun.localEulerAngles;
         angles.x = (angles.x > 180) ? angles.x - 360 : angles.x;
 
         //Clamping Turret Gun movement
         if (angles.x < -40)
         {
-            TurretGun.Rotate(0.1f, 0, 0);
-            return;
+            //TurretGun.Rotate(0.1f, 0, 0);
+            TurretGun.localEulerAngles = new Vector3(-40, 90, 0);
+            //return;
         }
         if (angles.x > 40)
         {
-            TurretGun.Rotate(-0.1f, 0, 0);
-            return;
+            //TurretGun.Rotate(-0.1f, 0, 0);
+            TurretGun.localEulerAngles = new Vector3(40, 90, 0);
+            //return;
         }
 
         //Moving Turret Gun
