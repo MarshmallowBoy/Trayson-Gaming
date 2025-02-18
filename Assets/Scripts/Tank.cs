@@ -59,6 +59,7 @@ public class Tank : NetworkBehaviour
         RaycastHit _mouseRay;
         if (Physics.Raycast(ray, out _mouseRay, Mathf.Infinity))
         {
+            Debug.Log(_mouseRay.transform.name);
             if (_mouseRay.point != null)
             {
                 Target = _mouseRay.point;
