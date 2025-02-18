@@ -22,6 +22,10 @@ public class Tank : NetworkBehaviour
     public Transform[] LeftWheels;
     public Transform[] RightWheels;
     public Camera TankCamera;
+    public VehiclePart MainBody;
+    public VehiclePart Turret;
+    public VehiclePart RightWheel;
+    public VehiclePart LeftWheel;
     private void Start()
     {
         if (IsOwner)
@@ -72,6 +76,10 @@ public class Tank : NetworkBehaviour
                 if (hit.transform.CompareTag("Player"))
                 {
                     hit.transform.GetComponent<Heath>().DoDamage(Damage);
+                }
+                if (hit.transform.CompareTag("Vehicle"))
+                {
+                    hit.transform.GetComponent<VehiclePart>().DoDamage(Damage);
                 }
             }
         }
