@@ -1179,7 +1179,7 @@ MonoBehaviour:
   - gravity 'number' - sets your gravity
   - resetprefs - resets your saved settings data.
   - maps - shows list of maps
-  - vehicle 'vehicle name eg. tank' - Makes sure to spawn player with certain vehicle
+  - vehicle 'vehicle name' - Makes sure to spawn player with certain vehicle
   CommandInputParameter:
   - Error_Debug
   - cmd

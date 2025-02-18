@@ -26740,7 +26740,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -26760,6 +26760,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 999
+--- !u!54 &904827183
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904827174}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!64 &910817289
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40517,6 +40544,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: a5d25c6a9d5af4e4aa3bf2039bf68238, type: 3}
       insertIndex: -1
       addedObject: {fileID: 904827182}
+    - targetCorrespondingSourceObject: {fileID: 5148817236446094103, guid: a5d25c6a9d5af4e4aa3bf2039bf68238, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 904827183}
   m_SourcePrefab: {fileID: 100100000, guid: a5d25c6a9d5af4e4aa3bf2039bf68238, type: 3}
 --- !u!64 &1851526534
 MeshCollider:

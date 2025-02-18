@@ -10,5 +10,9 @@ public class DamageOnTrigger : MonoBehaviour
         {
             other.transform.GetComponent<Heath>().DoDamage(Damage);
         }
+        if (other.CompareTag("Vehicle"))
+        {
+            other.transform.GetComponent<VehiclePart>().DoDamage(Damage);
+        }
     }
 }
