@@ -7,7 +7,6 @@ public class OnTankSpawned : NetworkBehaviour
         if (!IsOwner)
         {
             enabled = false;
-            Destroy(gameObject);
             return;
         }
         if (PlayerPrefs.GetString("ActiveVehicle") == string.Empty)
@@ -17,7 +16,7 @@ public class OnTankSpawned : NetworkBehaviour
         switch (PlayerPrefs.GetString("ActiveVehicle"))
         {
             case "none":
-                Destroy(gameObject);
+                DestroyTankServerRpc();
                 break;
             case "tank":
                 NetworkObject.GetComponent<SC_FPSController>().enabled = false;
@@ -29,4 +28,17 @@ public class OnTankSpawned : NetworkBehaviour
                 break;
         }
     }
+
+    [Rpc(SendTo.Server)]
+    public void DestroyTankServerRpc()
+    {
+        DestroyTankRpc();
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    public void DestroyTankRpc()
+    {
+        Destroy(gameObject);
+    }
+
 }
