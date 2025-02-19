@@ -7,6 +7,7 @@ public class OnTankSpawned : NetworkBehaviour
         if (!IsOwner)
         {
             enabled = false;
+            Destroy(gameObject);
             return;
         }
         if (PlayerPrefs.GetString("ActiveVehicle") == string.Empty)
