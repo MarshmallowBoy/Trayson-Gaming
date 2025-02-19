@@ -17,6 +17,7 @@ public class OnTankSpawned : NetworkBehaviour
         {
             case "none":
                 //DestroyTankServerRpc();
+                Destroy(gameObject);
                 break;
             case "tank":
                 NetworkObject.GetComponent<SC_FPSController>().enabled = false;
