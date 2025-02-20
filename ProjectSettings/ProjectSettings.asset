@@ -825,6 +825,7 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
+    Android: STEAMWORKS_NET
     Standalone: UNITY_URP;TND_XeSS;STEAMWORKS_NET;DLSS_INSTALLED;TND_DLSS
   additionalCompilerArguments: {}
   platformArchitecture: {}
