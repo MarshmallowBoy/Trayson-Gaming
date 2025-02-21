@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 1096634941}
   - component: {fileID: 1096634940}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 48e8563686442d94285de83b76955cc6, type: 2}
+  - {fileID: 2100000, guid: 18c53622c12b54d45b0999edc1d7532d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
