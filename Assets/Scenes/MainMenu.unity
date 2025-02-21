@@ -1447,6 +1447,7 @@ GameObject:
   - component: {fileID: 627645988}
   - component: {fileID: 627645987}
   - component: {fileID: 627645986}
+  - component: {fileID: 627645989}
   m_Layer: 0
   m_Name: "20210823_Galaxy Green screen video \uFF5C Milk Way Galaxy Green Screen000"
   m_TagString: Untagged
@@ -1539,13 +1540,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627645985}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 20, z: -89}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1999629812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627645989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627645985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f005c76b7b777fd4790c82671547d5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxRotation: {x: 5, y: 5}
+  Offset: {x: 5, y: 0}
 --- !u!1 &645751554
 GameObject:
   m_ObjectHideFlags: 0
