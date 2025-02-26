@@ -53,6 +53,9 @@ public class Tank : NetworkBehaviour
             body.angularVelocity += new Vector3(0, Input.GetAxis("Horizontal") * angularAcceleration, 0);
         }
 
+        
+
+        /*
         //Defining Target Based On Mouseposition
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -63,23 +66,26 @@ public class Tank : NetworkBehaviour
             {
                 Target = _mouseRay.point;
             }
-        }
+        }*/
 
         //Firing Mechanics
-        if (Input.GetButton("Fire1") && nextTimeToFire < Time.time)
+        if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
         {
-            nextTimeToFire = Time.time + Delay;
-            RaycastHit hit;
-            if (Physics.Raycast(TurretGun.position, -TurretGun.forward, out hit))
+            if (nextTimeToFire < Time.time)
             {
-                FireEffectsServerRpc();
-                if (hit.transform.CompareTag("Player"))
+                nextTimeToFire = Time.time + Delay;
+                RaycastHit hit;
+                if (Physics.Raycast(TurretGun.position, -TurretGun.forward, out hit))
                 {
-                    hit.transform.GetComponent<Heath>().DoDamage(Damage);
-                }
-                if (hit.transform.CompareTag("Vehicle"))
-                {
-                    hit.transform.GetComponent<VehiclePart>().DoDamage(Damage);
+                    FireEffectsServerRpc();
+                    if (hit.transform.CompareTag("Player"))
+                    {
+                        hit.transform.GetComponent<Heath>().DoDamage(Damage);
+                    }
+                    if (hit.transform.CompareTag("Vehicle"))
+                    {
+                        hit.transform.GetComponent<VehiclePart>().DoDamage(Damage);
+                    }
                 }
             }
         }
@@ -142,6 +148,31 @@ public class Tank : NetworkBehaviour
 
     void TurretMovement()
     {
+        //Turret Gun Converting 360 to 180 -180
+        Vector3 angles = TurretGun.localEulerAngles;
+        angles.x = (angles.x > 180) ? angles.x - 360 : angles.x;
+
+        if (Input.GetKey(KeyCode.UpArrow) && angles.x < ClampThresholdTurretGun.y)
+        {
+            TurretGun.localEulerAngles += Vector3.right;
+            Debug.Log(angles.x);
+        }
+        if (Input.GetKey(KeyCode.DownArrow) && angles.x > ClampThresholdTurretGun.x)
+        {
+            TurretGun.localEulerAngles -= Vector3.right;
+            Debug.Log(angles.x);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            TurretBody.localEulerAngles += Vector3.up;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            TurretBody.localEulerAngles -= Vector3.up;
+        }
+
+
+        /*
         //TurretBody Movement
         TurretBody.Rotate(0, TurretBody.InverseTransformPoint(Target).x * turretSpeed, 0);
 
@@ -165,5 +196,6 @@ public class Tank : NetworkBehaviour
 
         //Moving Turret Gun
         TurretGun.Rotate(TurretGun.InverseTransformPoint(Target).y, 0, 0);
+        */
     }
 }
