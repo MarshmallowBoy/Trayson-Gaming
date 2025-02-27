@@ -15,11 +15,11 @@ public class UIAnimController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && CharacterMenu.activeInHierarchy == true)
+        if(CharacterMenu.activeInHierarchy == true)
         {
             if(animr ==  null) { animr = GameObject.Find("AnimationAndFades").GetComponent<Animator>(); }
-            animr.SetTrigger("Exit");
+            if(Input.GetKeyDown(KeyCode.Escape)) { animr.SetTrigger("Exit"); }
         }
-        else { return; }
+        else if(CharacterMenu.activeInHierarchy == false) { return; }
     }
 }
