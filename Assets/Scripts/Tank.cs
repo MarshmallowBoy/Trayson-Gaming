@@ -74,10 +74,10 @@ public class Tank : NetworkBehaviour
             if (nextTimeToFire < Time.time)
             {
                 nextTimeToFire = Time.time + Delay;
+                FireEffectsServerRpc();
                 RaycastHit hit;
                 if (Physics.Raycast(TurretGun.position, -TurretGun.forward, out hit))
                 {
-                    FireEffectsServerRpc();
                     if (hit.transform.CompareTag("Player"))
                     {
                         hit.transform.GetComponent<Heath>().DoDamage(Damage);
