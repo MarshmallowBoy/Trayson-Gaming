@@ -6,18 +6,11 @@ public class UIAnimController : MonoBehaviour
     public AudioSource cMenuAS;
     public Animator animr;
 
-    public void EnableCharacterMenu()
+    public void ToggleCharacterMenu()
     {
-        CharacterMenu.SetActive(true);
-        if(cMenuAS ==  null) { GameObject.Find("CharacterMenu").GetComponent<AudioSource>(); cMenuAS.Play(); }
-        else { cMenuAS.Play(); }
-    }
-
-    public void DisableCharacterMenu()
-    {
-        if (cMenuAS == null) { GameObject.Find("CharacterMenu").GetComponent<AudioSource>(); cMenuAS.Stop(); }
-        else { cMenuAS.Stop(); }
-        CharacterMenu.SetActive(false);
+        CharacterMenu.SetActive(!CharacterMenu.activeInHierarchy);
+        if(cMenuAS ==  null) { GameObject.Find("CharacterMenu").GetComponent<AudioSource>(); }
+        if(CharacterMenu.activeInHierarchy == true) { cMenuAS.Play(); } else { cMenuAS.Stop(); }
     }
 
     private void FixedUpdate()
