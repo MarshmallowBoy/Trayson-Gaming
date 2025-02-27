@@ -20,6 +20,7 @@ public class OnTankSpawned : NetworkBehaviour
                 Destroy(gameObject);
                 break;
             case "tank":
+                NetworkObject.GetComponent<SC_FPSController>().HealthBar.SetActive(false);
                 NetworkObject.GetComponent<SC_FPSController>().enabled = false;
                 NetworkObject.GetComponent<SC_FPSController>().playerCamera.gameObject.SetActive(false);
                 NetworkObject.GetComponent<CapsuleCollider>().enabled = false;

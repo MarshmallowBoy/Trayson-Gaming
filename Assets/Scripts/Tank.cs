@@ -16,6 +16,7 @@ public class Tank : NetworkBehaviour
     public BlendShapesController BSC;
     public float TreadAnimSpeed = 1;
     public ParticleSystem MuzzleFlash;
+    public GameObject SandHitEffect;
     public float Delay;
     public int Damage;
     float nextTimeToFire;
@@ -85,6 +86,11 @@ public class Tank : NetworkBehaviour
                     if (hit.transform.CompareTag("Vehicle"))
                     {
                         hit.transform.GetComponent<VehiclePart>().DoDamage(Damage);
+                    }
+                    if (hit.transform.CompareTag("Terrain"))
+                    {
+                        GameObject temp = Instantiate(SandHitEffect, hit.point, Quaternion.identity);
+                        temp.transform.rotation = Quaternion.FromToRotation(transform.up, hit.normal);
                     }
                 }
             }

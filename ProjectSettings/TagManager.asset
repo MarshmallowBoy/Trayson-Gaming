@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Ice
   - Vehicle
+  - Terrain
   layers:
   - Default
   - TransparentFX
