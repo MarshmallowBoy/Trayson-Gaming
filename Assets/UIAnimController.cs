@@ -8,8 +8,8 @@ public class UIAnimController : MonoBehaviour
 
     public void ToggleCharacterMenu()
     {
+        if(cMenuAS ==  null) { cMenuAS = GameObject.Find("CharacterMenu").GetComponent<AudioSource>(); }
         CharacterMenu.SetActive(!CharacterMenu.activeInHierarchy);
-        if(cMenuAS ==  null) { GameObject.Find("CharacterMenu").GetComponent<AudioSource>(); }
         if(CharacterMenu.activeInHierarchy == true) { cMenuAS.Play(); } else { cMenuAS.Stop(); }
     }
 
