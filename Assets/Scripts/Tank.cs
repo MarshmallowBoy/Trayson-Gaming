@@ -160,12 +160,10 @@ public class Tank : NetworkBehaviour
         if (Input.GetKey(KeyCode.UpArrow) && angles.x < ClampThresholdTurretGun.y)
         {
             TurretGun.localEulerAngles += Vector3.right;
-            Debug.Log(angles.x);
         }
         if (Input.GetKey(KeyCode.DownArrow) && angles.x > ClampThresholdTurretGun.x)
         {
             TurretGun.localEulerAngles -= Vector3.right;
-            Debug.Log(angles.x);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
