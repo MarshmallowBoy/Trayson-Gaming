@@ -16,6 +16,7 @@ public class Tank : NetworkBehaviour
     public BlendShapesController BSC;
     public float TreadAnimSpeed = 1;
     public ParticleSystem MuzzleFlash;
+    public ParticleSystem BulletParticle;
     public GameObject SandHitEffect;
     public float Delay;
     public int Damage;
@@ -54,21 +55,6 @@ public class Tank : NetworkBehaviour
             body.angularVelocity += new Vector3(0, Input.GetAxis("Horizontal") * angularAcceleration, 0);
         }
 
-        
-
-        /*
-        //Defining Target Based On Mouseposition
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        RaycastHit _mouseRay;
-        if (Physics.Raycast(ray, out _mouseRay, Mathf.Infinity))
-        {
-            if (_mouseRay.point != null)
-            {
-                Target = _mouseRay.point;
-            }
-        }*/
-
         //Firing Mechanics
         if (Input.GetButton("Fire1") || Input.GetKey(KeyCode.Space))
         {
@@ -95,6 +81,18 @@ public class Tank : NetworkBehaviour
                 }
             }
         }
+        /*
+        //Defining Target Based On Mouseposition
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit _mouseRay;
+        if (Physics.Raycast(ray, out _mouseRay, Mathf.Infinity))
+        {
+            if (_mouseRay.point != null)
+            {
+                Target = _mouseRay.point;
+            }
+        }*/
         Debug.DrawRay(TurretGun.position, -TurretGun.forward * 1000, Color.red);
     }
 
@@ -108,6 +106,7 @@ public class Tank : NetworkBehaviour
     public void FireEffectsClientRpc()
     {
         MuzzleFlash.Play();
+        BulletParticle.Play();
     }
 
     private void FixedUpdate()

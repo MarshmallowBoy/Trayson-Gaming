@@ -21374,6 +21374,7 @@ MonoBehaviour:
   BSC: {fileID: 837535398650142238}
   TreadAnimSpeed: 25
   MuzzleFlash: {fileID: 2724093434039849526}
+  BulletParticle: {fileID: 8317023321900226683}
   SandHitEffect: {fileID: 8334171012582726996, guid: 1145d6242c6650143b8e21ecdaf73af2, type: 3}
   Delay: 0.1
   Damage: 10
@@ -27300,23 +27301,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.505
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.033
+      value: 0.043
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071064
+      value: 0.71923035
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.000000029802301
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -27324,7 +27325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071072
+      value: 0.69477177
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -27336,7 +27337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 88.018
       objectReference: {fileID: 0}
     - target: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -27346,6 +27347,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankShooting
       objectReference: {fileID: 0}
+    - target: {fileID: 4171137461664287805, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171137461664287805, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27354,5 +27363,10 @@ PrefabInstance:
 --- !u!4 &5743232775522609852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 376846655606259450, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
+  m_PrefabInstance: {fileID: 5372473086083044422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8317023321900226683 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4171137461664287805, guid: addf8f865a6880d449e2f1aa1331ef1e, type: 3}
   m_PrefabInstance: {fileID: 5372473086083044422}
   m_PrefabAsset: {fileID: 0}
