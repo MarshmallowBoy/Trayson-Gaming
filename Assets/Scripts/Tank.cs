@@ -121,8 +121,8 @@ public class Tank : NetworkBehaviour
     void TreadMovement()
     {
         //Right is one, left is negative one
-        BSC.rightProgress += -Input.GetAxis("Horizontal") * TreadAnimSpeed;
-        BSC.leftProgress += Input.GetAxis("Horizontal") * TreadAnimSpeed;
+        MoveTreadPingRpc(true, -Input.GetAxis("Horizontal") * TreadAnimSpeed); //right
+        MoveTreadPingRpc(false, Input.GetAxis("Horizontal") * TreadAnimSpeed); //left
 
         //Move Wheels Forward Or Backward
         foreach (Transform g in RightWheels)
@@ -137,8 +137,8 @@ public class Tank : NetworkBehaviour
         //Move Wheels Side
         if (Input.GetAxis("Horizontal") == 0)
         {
-            BSC.rightProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
-            BSC.leftProgress += Input.GetAxis("Vertical") * TreadAnimSpeed;
+            MoveTreadPingRpc(true, Input.GetAxis("Vertical") * TreadAnimSpeed); //right
+            MoveTreadPingRpc(false, Input.GetAxis("Vertical") * TreadAnimSpeed); //left
 
             foreach (Transform g in RightWheels)
             {
@@ -148,6 +148,25 @@ public class Tank : NetworkBehaviour
             {
                 g.Rotate(0, 0, -Input.GetAxis("Vertical") * wheelSpeed);
             }
+        }
+    }
+
+    [Rpc(SendTo.Server)]
+    void MoveTreadPingRpc(bool Right, float Increment)
+    {
+        MoveTreadPongRpc(Right, Increment);
+    }
+
+    [Rpc(SendTo.ClientsAndHost)]
+    void MoveTreadPongRpc(bool Right, float Increment)
+    {
+        if (Right)
+        {
+            BSC.rightProgress += Increment;
+        }
+        else
+        {
+            BSC.leftProgress += Increment;
         }
     }
 
