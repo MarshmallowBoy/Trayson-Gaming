@@ -1,0 +1,37 @@
+v1.6
+-Changed process opacity and replace redundant to default off.
+-Fixed a bug with the normal map not correctly refreshed after being applied.
+
+v1.5
+-Fixed a bug in the Unity HD pipeline name matching. Emissive, BaseColor, and MaskMap are assigned correctly now.
+
+v1.4
+-Fixed name matching bug.
+-Added support for Unity HD and LW SRP.
+
+v1.3
+-More robust name matching.
+-Removed option to include mesh name as it is not needed anymore.
+
+v1.2
+-Objects with multiple materials are now supported.
+-Removing redundant occlusion texture is now supported.
+-Now supports default Substance Painter texture export names.
+-Added amount of textures assigned to the console log.
+-Instance suffix in name of material is now ignored.
+
+v1.1
+-If a folder is selected, only textures contained in the selected folder are now processed.
+-Option added that if all pixels are the same color in a texture (or if the metal/rough component has the same value), no texture is applied to the material and the applicable color/sliders are set accordingly instead.
+-Single selected objects can now be automatically matched to the correct textures, provided the folder the textures are in matches up with one of the object parent names.
+-Option added that If the albedo texture contains any alpha value (less than 255), the shader rendering mode is set to transparent.
+-Option added to set textures to the highest quality Crunch compression.
+-Materials can now be made unique.
+-Textures are set to maximum 4k size.
+-Added statistics and error messages to console.
+-More robust name matching.
+-Textures are now only assigned to materials which are present in the scene.
+-Export preset now includes mixed AO map, which includes the custom AO layer if used.
+
+v1.0
+-First release.
