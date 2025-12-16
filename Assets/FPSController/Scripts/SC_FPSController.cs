@@ -54,11 +54,17 @@ public class SC_FPSController : NetworkBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        //Testing to see if I need this to solve linux issue
+        /*
         if (IsOwner)
         {
             // Lock cursor
-            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }*/
+        if (IsOwner)
+        {
+            StartCoroutine(LockCursorNextFrame());
         }
         playerCamera.gameObject.SetActive(IsOwner);
         HealthBar.SetActive(IsOwner);
@@ -79,6 +85,15 @@ public class SC_FPSController : NetworkBehaviour
             }
         }
     }
+
+    IEnumerator LockCursorNextFrame()
+    {
+        yield return null; // wait one frame
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        canMove = true;
+    }
+
 
     public void SetPosition(Vector3 position)
     {

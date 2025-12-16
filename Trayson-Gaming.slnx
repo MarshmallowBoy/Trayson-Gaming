@@ -1,0 +1,14 @@
+﻿<Solution>
+  <Project Path="com.rlabrecque.steamworks.net.csproj" />
+  <Project Path="DissonanceVoip.csproj" />
+  <Project Path="DissonanceVoipEditor.csproj" />
+  <Project Path="com.thenakeddev.dlss.Editor.csproj" />
+  <Project Path="com.thenakeddev.xess.Runtime.URP.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="com.thenakeddev.xess.Editor.csproj" />
+  <Project Path="com.thenakeddev.dlss.Runtime.URP.csproj" />
+  <Project Path="com.thenakeddev.xess.Runtime.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="com.rlabrecque.steamworks.net.editor.csproj" />
+  <Project Path="com.thenakeddev.dlss.Runtime.csproj" />
+</Solution>
