@@ -54,14 +54,6 @@ public class SC_FPSController : NetworkBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        //Testing to see if I need this to solve linux issue
-        /*
-        if (IsOwner)
-        {
-            // Lock cursor
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }*/
         if (IsOwner)
         {
             StartCoroutine(LockCursorNextFrame());
@@ -80,7 +72,6 @@ public class SC_FPSController : NetworkBehaviour
         {
             foreach (var m in PlayerModel)
             {
-                //m.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
                 m.gameObject.layer = 6;
             }
         }
@@ -107,14 +98,6 @@ public class SC_FPSController : NetworkBehaviour
         {
             YourOnThinIcePal = false;
             RaycastHit _hit;
-            /*
-            if (Physics.Raycast(transform.position, Vector3.down, out _hit, 0.1f))
-            {
-                if (_hit.transform.CompareTag("Ice"))
-                {
-                    YourOnThinIcePal = true;
-                }
-            }*/
 
             if (Physics.Raycast(transform.position, Vector3.down, out _hit, 0.5f))
             {
